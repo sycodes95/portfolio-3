@@ -1,0 +1,76 @@
+@font-face {
+  font-family: Display;
+  src: url(/src/assets/fonts/Hipnouma.otf);
+}
+
+@font-face {
+  font-family: Display2;
+  src: url(/src/assets/fonts/AbrilFatface-Regular.ttf);
+}
+
+@font-face {
+  font-family: Main;
+  src: url(/src/assets/fonts/AdventPro.ttf);
+}
+
+.font-display{
+  font-family: Display, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-display-2 {
+  font-family: Display2, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-main {
+  font-family: Main, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.font-outline-nude{
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  /* -webkit-text-stroke: 1px rgb(255, 255, 255); */
+}
+
+.line-height{
+  line-height: 4px;
+}
+
+.smol-font{
+  font-size: 5px;
+}
+
+.font-glow-white{
+  text-shadow: 0 0 4px rgba(158, 158, 158, 1),
+  0 0 4px rgba(255, 255, 255, 1),
+  0 0 20px rgba(255, 255, 255, 1),
+  0 0 40px rgba(255, 255, 255, 1);
+}
+
+.font-glow-black {
+  text-shadow: 0 0 4px rgb(26, 26, 26),
+    0 0 4px rgb(26, 26, 26),
+    0 0 30px rgb(26, 26, 26),
+    0 0 20px rgb(26, 26, 26);
+}
+
+.box-glow-white {
+  box-shadow: 0 0 4px rgba(158, 158, 158, 1),
+    0 0 4px rgba(255, 255, 255, 1),
+    0 0 4px rgba(255, 255, 255, 1),
+    0 0 20px rgba(255, 255, 255, 1);
+}
+
+.box-glow-red {
+  box-shadow: 0 0 4px rgb(255, 45, 45),
+    0 0 4px rgb(255, 45, 45),
+    0 0 4px rgb(255, 45, 45),
+    0 0 20px rgb(255, 45, 45);
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+
+
+
