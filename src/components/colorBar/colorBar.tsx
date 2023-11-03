@@ -18,13 +18,13 @@ export default function ColorBar () {
     <div className='flex w-full h-2 bg-white'>
       {
         colors.map((color) => (
-          <div className={`w-10 h-2 ${color}`} ></div>
+          <div className={`w-10 h-2 ${color}`} key={color}></div>
         ))
       }
 
-      <span className="flex items-center pl-2 font-bold text-black smol-font">
-        ur geh
-      </span>
+      <a href="https://www.youtube.com/watch?v=fsU9AAktB5w" target="_blank" className="flex items-center justify-center w-10 font-bold text-black smol-font whitespace-nowrap hover:bg-black hover:text-white">
+        LGFU
+      </a>
       
       
 

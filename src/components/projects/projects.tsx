@@ -1,10 +1,30 @@
+import { useState } from "react"
+
 export default function Projects () {
+
+  const [projects, setProjects] = useState([
+    'Polyglot Pal',
+    '',
+    '',
+    '',
+    
+  ])
   return (
-    <div className="flex flex-col w-full h-full grow rounded-2xl">
-      <div className="flex items-center h-full ml-4 mr-4 bg-white rounded-full w-fit box-glow-white">
-        <span className="flex items-center w-full p-2 pl-12 pr-12 mt-4 text-6xl text-pine font-display">
-          //
+    <div className="flex flex-col w-full h-full gap-4 md:pl-8 grow rounded-2xl">
+      <div className="flex items-center justify-center w-full h-full bg-white md:justify-start md:w-fit ">
+        <span className="flex items-center p-2 ml-2 mr-2 text-2xl font-bold w-fit text-pine ">
+          LOOK WHAT I MADE
         </span>
+      </div>
+
+      <div className="flex flex-col w-full gap-2">
+        {
+        projects.map((project, index) => (
+          <div className="flex items-center gap-4">
+            <span className="mt-4 text-6xl text-pine font-outline-yellow font-display whitespace-nowrap">{project}</span>
+          </div>
+        ))
+        }
       </div>
     </div>
   )

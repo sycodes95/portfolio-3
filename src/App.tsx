@@ -19,7 +19,7 @@ function App() {
         <Projects />
       </div> */}
       <ColorBar />
-      <div className='flex flex-col w-full h-full max-w-6xl gap-8 p-8 pl-4 pr-4 overflow-hidden grow md:flex-row'>
+      <div className='flex flex-col w-full h-full max-w-6xl gap-12 p-8 pl-4 pr-4 overflow-hidden grow md:flex-row'>
         <About />
         <Projects />
       </div>
