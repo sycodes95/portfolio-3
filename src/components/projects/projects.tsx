@@ -3,10 +3,11 @@ import { useState } from "react"
 export default function Projects () {
 
   const [projects, setProjects] = useState([
-    'Polyglot Pal',
-    '',
-    '',
-    '',
+    { title: 'Daynestmetrics', color: 'border-white'},
+    { title: 'Polyglot Pal', color: 'border-yellow-500'},
+
+    { title: 'Jobtrackr', color: 'border-blue-300'}
+
     
   ])
   return (
@@ -17,11 +18,12 @@ export default function Projects () {
         </span>
       </div>
 
-      <div className="flex flex-col w-full gap-2">
+      <div className="flex flex-col w-full gap-8 p-4 rounded-xl bg-opacity-10">
         {
         projects.map((project, index) => (
-          <div className="flex items-center gap-4">
-            <span className="mt-4 text-6xl text-pine font-outline-yellow font-display whitespace-nowrap">{project}</span>
+          <div className="relative flex items-center gap-4 p-2 overflow-hidden group hover:cursor-pointer">
+            <span className="z-10 w-10 h-10 text-4xl text-center text-white transition-colors duration-1000 rounded-full whitespace-nowrap ">{project.title}</span>
+            <div className={`absolute top-0 w-full h-full transition-all duration-700 border-b ${project.color} group-hover:left-0 left-full`}></div>
           </div>
         ))
         }

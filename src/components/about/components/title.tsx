@@ -1,8 +1,8 @@
 
 export default function Title() {
   return (
-    <div className="relative flex flex-col rounded-lg w-fit font-outline-white ">
-      <div className="flex items-center gap-4 pb-10 text-black text-opacity-0 transition-all font-display text-8xl md:text-9xl">
+    <div className="relative z-10 flex flex-col items-center rounded-lg w-fit">
+      <div className="flex items-center gap-4 text-white transition-all text-8xl font-display md:text-9xl ">
         <span className=''>Kevin</span>
         <span className=''>Kim</span>
       </div>
@@ -14,8 +14,9 @@ export default function Title() {
         <span className=''>WEB</span>
         <span className=''>DEVELOPER</span>
       </div> */}
-      <div className="absolute bottom-0 flex w-full gap-4 text-5xl transition-all font-display md:text-6xl">
-        <span className='whitespace-nowrap'>Full-Stack Developer.</span>
+      <div className="flex flex-col items-center w-full text-4xl text-white transition-all font-display md:text-6xl">
+        <span className='whitespace-nowrap'>Web Developer</span>
+        <span></span>
 
       </div>
 

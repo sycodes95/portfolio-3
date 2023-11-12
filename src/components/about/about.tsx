@@ -15,24 +15,24 @@ import {
 export default function About () {
 
   const skills = [
-    { name: 'react.js', icon: <i className="text-2xl text-center text-white rounded-full devicon-react-original"></i>},
-    { name: 'next.js', icon: <i className="text-2xl text-white devicon-nextjs-original"></i>},
+    { name: 'react.js', icon: <i className="text-2xl text-center text-black rounded-full devicon-react-original"></i>},
+    { name: 'next.js', icon: <i className="text-2xl text-black devicon-nextjs-original"></i>},
     { name: 'typescript', icon: <i className="text-2xl devicon-typescript-plain"></i>},
   
-    { name: 'tailwindcss', icon:  <i className="text-2xl text-white devicon-tailwindcss-plain"></i>},
+    { name: 'tailwindcss', icon:  <i className="text-2xl text-black devicon-tailwindcss-plain"></i>},
            
           
-    { name: 'node.js', icon: <i className="text-2xl text-white devicon-nodejs-plain"></i>},
+    { name: 'node.js', icon: <i className="text-2xl text-black devicon-nodejs-plain"></i>},
             
           
     { name: 'postgresql', icon: ''},
   ]
   return (
-    <div className="flex flex-col w-full md:w-fit">
+    <div className="z-10 flex flex-col w-full p-4 md:w-fit">
       <Title />
 
       <div className="flex items-center gap-2 p-2 border-dashed">
-        <GitHubIcon className="text-white" />
+        <GitHubIcon className="text-black" />
         <YouTubeIcon className="text-red-500 " fontSize="large" />
       </div>
       {/* <div className="flex flex-col items-center w-full pt-8 md:items-start">
@@ -43,11 +43,11 @@ export default function About () {
         </div>
       </div> */}
 
-      <div className="flex items-start gap-4 pt-2">
+      <div className="flex items-start gap-4 p-8 bg-white  bg-opacity-10 rounded-2xl">
         <div className="pt-2 pb-2 text-lg font-bold text-black bg-white h-fit w-fit vertical-text">
           THE STACK
         </div>
-        <div className="flex flex-col w-full h-full border-t border-white font-display-2">
+        <div className="flex flex-col w-full h-full border-t border-white">
           {
           skills.map((skill) => (
             <div className="flex items-end justify-between gap-2">
@@ -76,7 +76,7 @@ export default function About () {
         <Sheet>
           <SheetTrigger className="group">
             <div className="flex items-center justify-center text-black transition-all duration-500 bg-white rounded-full cursor-pointer hover:bg-pine w-44 h-44 group box-glow-white">
-              <span className="text-lg font-bold text-center transition-all duration-500 group-hover:text-white text-pine font-glow-black" >
+              <span className="text-lg font-bold text-center transition-all duration-500 group-hover:text-black text-pine font-glow-black" >
                 ABOUT
               </span>
             </div>
