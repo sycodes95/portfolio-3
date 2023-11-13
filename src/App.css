@@ -31,7 +31,7 @@
 }
 
 .font-outline-black {
-  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  -webkit-text-stroke: 20px rgb(0, 0, 0);
   /* -webkit-text-stroke: 1px rgb(255, 255, 255); */
 }
 
@@ -59,11 +59,47 @@
   0 0 40px rgba(255, 255, 255, 1);
 }
 
+.font-glow-red {
+  text-shadow: 4px 6px 0.05px rgba(91, 91, 255, 0.2),
+  -4px -6px 0.05px rgba(223, 65, 65, 0.1);
+}
+
+/* .font-glow-red {
+  color: transparent;
+  text-shadow:
+    -10px -10px 0px rgba(68, 68, 68, 0.5),
+    5px -4px 0px rgba(68, 68, 68, 0.5),
+    -1px 1px 0px rgba(75, 75, 75, 0.5),
+    1px 1px 0px rgba(75, 75, 75, 0.5),
+    -2px -2px 0px rgba(75, 75, 75, 0.5),
+    2px -2px 0px rgba(75, 75, 75, 0.5),
+    -2px 2px 0px rgba(75, 75, 75, 0.5),
+    2px 2px 0px rgba(75, 75, 75, 0.5);
+} */
+
+.font-glow-none {
+  text-shadow: 0px 0px 0px rgba(16, 16, 16, 0);
+    
+}
+
+.font-glow-blue {
+  text-shadow: -4px -4px 1px rgb(79, 137, 236);
+}
+
 .font-glow-black {
   text-shadow: 0 0 4px rgb(248, 247, 247),
     0 0 3px rgb(26, 26, 26),
     0 0 3px rgb(26, 26, 26),
     0 0 0px rgb(82, 82, 82);
+}
+
+.font-lines-red {
+  -webkit-text-stroke: 4px 4px 1px rgba(255, 255, 255, 0.5),
+    -4px -4px 1px rgba(0, 0, 0, 0.5);
+}
+
+.font-lines-none {
+  -webkit-text-stroke: 4px 4px 1px rgba(255, 255, 255, 0);
 }
 
 .box-glow-white {

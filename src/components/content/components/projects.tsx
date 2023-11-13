@@ -84,7 +84,7 @@ export default function Projects () {
       <div className="flex flex-col justify-between w-64 h-full p-2 pt-4 pb-4">
         {
         projects.map((proj, index) => (
-          <Sheet>
+          <Sheet >
             <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-stone-500">
               <span className="pl-2 mb-1 text-4xl">{index + 1}. {proj.name}</span>
             </SheetTrigger>
