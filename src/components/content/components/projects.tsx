@@ -7,6 +7,10 @@ import dnmLifestylefactors from '../../../assets/projectPictures/daynestmetrics/
 import dnmLangingPage from  '../../../assets/projectPictures/daynestmetrics/landingPage.png'
 import dnmAbout from  '../../../assets/projectPictures/daynestmetrics/about.png'
 import dnmEntryDialog from  '../../../assets/projectPictures/daynestmetrics/entryDialog.png'
+import pgpApp from '../../../assets/projectPictures/polyglotpal/app.png'
+import pgpLandingPage from '../../../assets/projectPictures/polyglotpal/landingPage.png'
+
+
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { RocketIcon } from "@radix-ui/react-icons"
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -70,7 +74,17 @@ export default function Projects () {
       websiteUrl: '',
       youtubeUrl: 'https://www.youtube.com/@untalentedwebdev'
     },
-    { name: 'Polyglot Pal', description: '', images: [], stack: []},
+    { 
+      name: 'Polyglot Pal', 
+      description: 'Polyglot Pal is designed to help language learners improve their speaking and communication skills with the help of AI, in a specific language and level of your choice.', 
+      images: [
+        { src: pgpLandingPage, description: ''},
+        { src: pgpApp, description: ''},
+      ], 
+      websiteUrl: 'https://polyglotpal.up.railway.app/',
+      stack: [],
+      youtubeUrl: 'https://youtu.be/PJjk4Qg_GiU?si=eZEPVYk85dUh1vJh&t=574'
+    },
     { name: 'Jobtrackr', description: '', images: [], stack: []},
   ]
   return (
@@ -114,13 +128,25 @@ export default function Projects () {
                   </a>
                 </AlertDescription>
               </Alert>
-             
+              }
+              {
+              proj.name === 'Polyglot Pal' &&
+              <Alert className='border'>
+                <RocketIcon className="w-4 h-4" />
+                <AlertTitle>This project won the honorable mention category of an online hackathon.</AlertTitle>
+                <AlertDescription className=''>
+                   <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
+                    <YouTubeIcon />
+                    <span className='flex flex-wrap whitespace-prewrap'>Here are the winners of the Hackathon</span>
+                  </a>
+                </AlertDescription>
+              </Alert>
               }
               <SheetDescription className='flex flex-col p-4 text-sm font-semibold text-white border border-white opacity-75 '>
                 <span className='text-lg font-bold'>Description</span>
                 <span>{proj.description}</span>
               </SheetDescription>
-              <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
+              <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 grow'>
                 {
                 proj.images.map((data, index) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group'>
