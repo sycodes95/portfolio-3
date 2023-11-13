@@ -1,4 +1,5 @@
 
+
 export default function Stack () {
 
   const skills = [
@@ -7,7 +8,7 @@ export default function Stack () {
     { name: 'typescript', icon: <i className="text-2xl devicon-typescript-plain"></i>},
     { name: 'tailwindcss', icon:  <i className="text-2xl text-white devicon-tailwindcss-plain"></i>},
     { name: 'node.js', icon: <i className="text-2xl text-white devicon-nodejs-plain"></i>},
-    { name: 'postgresql', icon: ''},
+    { name: 'postgresql', icon:<i className="text-2xl text-white devicon-postgresql-plain"></i> },
   ]
 
   
@@ -19,7 +20,7 @@ export default function Stack () {
         THE STACK
       </div>
 
-      <div className="flex flex-col h-full p-2 w-72">
+      <div className="flex flex-col w-64 h-full p-2">
         {
         skills.map((skill) => (
           <div className="flex items-end justify-between gap-2">

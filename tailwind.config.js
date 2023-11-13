@@ -17,6 +17,7 @@ module.exports = {
     },
     extend: {
       colors: {
+        teal: "#08a4a7",
         nude: "#e3bc9a",
         pine: "#121517",
         border: "hsl(var(--border))",
