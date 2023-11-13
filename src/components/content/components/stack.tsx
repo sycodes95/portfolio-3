@@ -22,9 +22,9 @@ export default function Stack () {
 
       <div className="flex flex-col w-64 h-full p-2">
         {
-        skills.map((skill) => (
+        skills.map((skill, index) => (
           <div className="flex items-end justify-between gap-2">
-            <span className="pl-2 mb-1 text-xl">{skill.name}</span>
+            <span className={`pl-2 mb-1 text-xl`}>{skill.name}</span>
             {skill.icon}
           </div>
         ))

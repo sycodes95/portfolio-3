@@ -127,7 +127,7 @@ export default function Projects () {
                     <img className='transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70' key={data.src} src={data.src} />
                     {
                     data.description &&
-                    <div className='absolute w-full max-h-full p-2 overflow-y-auto text-sm transition-all duration-700 bg-black -bottom-full group-hover:bottom-0 bg-opacity-90'>{data.description}</div>
+                    <div className='absolute w-full max-h-full p-4 overflow-y-auto text-sm transition-all duration-700 bg-black -bottom-full group-hover:bottom-0 bg-opacity-90'>{data.description}</div>
                     }
                   </div>
                 ))
@@ -138,7 +138,7 @@ export default function Projects () {
               <SheetClose className='flex items-center justify-center w-full mt-4'>
                 <div className='p-2 border border-white '>Close X</div>
               </SheetClose>
-              <a className='fixed top-0 left-0 z-50 flex items-center justify-center w-24 h-12 text-black bg-white shadow-lg rounded-b-2xl shadow-stone-400' href={proj.websiteUrl} target='_blank'>
+              <a className='fixed top-0 left-0 z-50 flex items-center justify-center w-24 h-12 text-black bg-white shadow-md rounded-b-2xl shadow-zinc-600' href={proj.websiteUrl} target='_blank'>
                 <span className='font-bold text-black '>Visit Site</span>
               </a>
               
