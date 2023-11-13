@@ -53,9 +53,9 @@
 }
 
 .font-glow-white{
-  text-shadow: 0 0 4px rgba(158, 158, 158, 1),
+  text-shadow: 0 0 2px rgba(158, 158, 158, 1),
+  0 0 4px rgb(0, 0, 0),
   0 0 4px rgba(255, 255, 255, 1),
-  0 0 20px rgba(255, 255, 255, 1),
   0 0 40px rgba(255, 255, 255, 1);
 }
 
@@ -70,7 +70,7 @@
   box-shadow: 0 0 4px rgba(158, 158, 158, 1),
     0 0 4px rgba(255, 255, 255, 1),
     0 0 4px rgba(255, 255, 255, 1),
-    0 0 20px rgba(255, 255, 255, 1);
+    0 0 40px rgba(255, 255, 255, 1);
 }
 
 .box-glow-red {
@@ -85,9 +85,14 @@
     #100F0F 50%);
 }
 
-.vertical-text {
+.vertical-text-lr {
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+}
+
+.vertical-text-rl {
+  writing-mode: vertical-rl;
+  transform: rotate(360deg);
 }
 
 

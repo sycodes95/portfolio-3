@@ -55,17 +55,17 @@ const Smoke: React.FC = () => {
       'https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png'
     );
     smokeMaterial = new THREE.MeshLambertMaterial({
-      color: 0x000000,
+      color: 0x353030,
       map: smokeTexture,
       transparent: true
     });
-    const smokeGeo = new THREE.PlaneGeometry(250, 250);
+    const smokeGeo = new THREE.PlaneGeometry(300, 300);
 
-    for (let p = 0; p < 150; p++) {
+    for (let p = 0; p < 200; p++) {
       const particle = new THREE.Mesh(smokeGeo, smokeMaterial);
       particle.position.set(
         Math.random() * 500 - 250,
-        Math.random() * 500 - 250,
+        Math.random() * 500 - 200,
         Math.random() * 1000 - 100
       );
       particle.rotation.z = Math.random() * 360;
@@ -84,7 +84,7 @@ const Smoke: React.FC = () => {
     const evolveSmoke = () => {
       const delta = clock.getDelta();
       smokeParticles.forEach(particle => {
-        particle.rotation.z += delta * 0.2;
+        particle.rotation.z += delta * 0.15;
       });
     };
 
@@ -119,7 +119,7 @@ const Smoke: React.FC = () => {
   }, []);
 
   return (
-      <div ref={mountRef} className="absolute top-0 Smoke" />
+      <div ref={mountRef} className="fixed top-0 Smoke" />
   )
   
 };
