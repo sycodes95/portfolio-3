@@ -7,8 +7,15 @@ import dnmLifestylefactors from '../../../assets/projectPictures/daynestmetrics/
 import dnmLangingPage from  '../../../assets/projectPictures/daynestmetrics/landingPage.png'
 import dnmAbout from  '../../../assets/projectPictures/daynestmetrics/about.png'
 import dnmEntryDialog from  '../../../assets/projectPictures/daynestmetrics/entryDialog.png'
+
 import pgpApp from '../../../assets/projectPictures/polyglotpal/app.png'
 import pgpLandingPage from '../../../assets/projectPictures/polyglotpal/landingPage.png'
+
+import jtDashboard from '../../../assets/projectPictures/jobtrackr/dashboard.png'
+import jtTable from '../../../assets/projectPictures/jobtrackr/table.png'
+import jtLogin from '../../../assets/projectPictures/jobtrackr/login.png'
+import jtEntry from '../../../assets/projectPictures/jobtrackr/application-entry.png'
+
 
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -71,7 +78,7 @@ export default function Projects () {
         
       ], 
       stack: ['react.js', 'next.js', 'typescript', 'tailwindcss', 'postgresql'],
-      websiteUrl: '',
+      websiteUrl: 'https://daynestmetrics.up.railway.app/',
       youtubeUrl: 'https://www.youtube.com/@untalentedwebdev'
     },
     { 
@@ -85,7 +92,19 @@ export default function Projects () {
       stack: [],
       youtubeUrl: 'https://youtu.be/PJjk4Qg_GiU?si=eZEPVYk85dUh1vJh&t=574'
     },
-    { name: 'Jobtrackr', description: '', images: [], stack: []},
+    { 
+      name: 'Jobtrackr', 
+      description: 'Jobtrackr was created to help job seeker keep track of applications and find ways to improve their job seeking strategies using data visualization tools', 
+      images: [
+        { src: jtLogin, description: ''},
+        { src: jtDashboard, description: 'Dashboard that provides statistics and data visualizations to give the users insights into their job seeking strategies'},
+        { src: jtEntry, description: 'Job application entry modal.'},
+        { src: jtTable, description: 'Table view of all job applications. Features sorting by columns, filtering, and pagination.'},
+      ], 
+      websiteUrl: 'https://jobtrackr.pro',
+      stack: [],
+      youtubeUrl: ''
+    },
   ]
   return (
     <div className="relative flex ">
@@ -103,7 +122,7 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-4xl">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='flex flex-col h-full max-h-screen gap-4 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-75 border-t-black font-main' side={'bottom'}>
+            <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-4 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
               <SheetTitle className='flex items-center justify-between '>
                 <span className='text-3xl font-glow-white'>{proj.name}</span>
                 
@@ -146,7 +165,7 @@ export default function Projects () {
                 <span className='text-lg font-bold'>Description</span>
                 <span>{proj.description}</span>
               </SheetDescription>
-              <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 grow'>
+              <div className='grid grid-cols-1 gap-4 grow'>
                 {
                 proj.images.map((data, index) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group'>
@@ -161,14 +180,25 @@ export default function Projects () {
 
               </div>
 
-              <SheetClose className='flex items-center justify-center w-full mt-4'>
-                <div className='p-2 border border-white '>Close X</div>
-              </SheetClose>
-              <a className='fixed top-0 left-0 z-50 flex items-center justify-center w-24 h-12 text-black bg-white shadow-md rounded-b-2xl shadow-zinc-600' href={proj.websiteUrl} target='_blank'>
-                <span className='font-bold text-black '>Visit Site</span>
+              <div className='flex items-center justify-center w-full mt-4'>
+                <SheetClose className='p-2 border border-white '>Close X</SheetClose>
+              </div>
+              <a className='fixed left-0 z-50 flex items-center justify-center w-8 h-32 text-black transition-all duration-500 bg-white shadow-sm hover:bg-black hover:text-white whitespace-nowrap top-1/2 rounded-r-2xl shadow-zinc-600 vertical-text-rl' href={proj.websiteUrl} target='_blank'>
+                <span className='text-2xl font-bold text-black font-outline-white'>Visit Site</span>
               </a>
+
+              <SheetClose className='fixed top-0 right-0 hidden w-1/2 h-full cursor-default lg:contents'>
+              
+                <SheetContent className='hidden lg:flex fixed top-0 z-50 items-center text-black text-opacity-60 justify-center w-1/2 min-h-screen p-4   border-none cursor-default font-display text-[20vh] right-0 vertical-text-rl shadow-none bg-white bg-opacity-5 ' side={'right'}>
+                  
+                  <span className=''>{proj.name}</span>
+
+                </SheetContent>
+              </SheetClose>
+              
               
             </SheetContent>
+            
 
           </Sheet>
           
