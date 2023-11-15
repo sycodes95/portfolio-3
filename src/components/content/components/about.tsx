@@ -21,7 +21,7 @@ export default function About () {
   return (
     <Sheet>
       <SheetTrigger className="group">
-        <div className="flex items-center justify-center text-white transition-all duration-500 bg-white rounded-full cursor-pointer hover:bg-black hover:bg-opacity-0 w-44 h-44 group box-glow-white">
+        <div className="flex items-center justify-center text-white transition-all duration-500 bg-white rounded-full cursor-pointer hover:bg-black hover:bg-opacity-0 w-44 h-44 group box-glow-dna">
           <Icon className="text-black transition-all duration-500 text-opacity-80 group-hover:text-white " path={mdiDna} size={1.5} />
         </div>
       </SheetTrigger>

@@ -124,11 +124,11 @@ export default function Projects () {
 
             <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-4 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
               <SheetTitle className='flex items-center justify-between '>
-                <span className='text-4xl text-black md:text-5xl font-outline-white'>{proj.name}</span>
+                <span className='text-4xl text-black transition-all duration-500 md:text-6xl lg:text-7xl font-outline-white'>{proj.name}</span>
                 
               </SheetTitle>
               
-              <div className='flex flex-wrap items-center gap-2'>
+              <div className='flex flex-wrap items-center gap-2 text-lg' >
                 {
                 proj.stack.map((tech, index) => (
                   <span key={tech}>{tech}</span>
@@ -137,7 +137,7 @@ export default function Projects () {
               </div>
               {
               proj.name === 'daynestmetrics' &&
-              <Alert className='border'>
+              <Alert className='text-lg border'>
                 <RocketIcon className="w-4 h-4" />
                 <AlertTitle>I built a big portion of this project in public on my youtube channel!</AlertTitle>
                 <AlertDescription className=''>

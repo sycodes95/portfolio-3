@@ -4,7 +4,7 @@ import { InfinitySpin } from  'react-loader-spinner'
 import Smoke from './components/smokeThreeJs/smokeThreeJs'
 import Content from './components/content/content'
 import Borders from './components/borders/borders'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   Sheet,
   SheetContent,
@@ -14,11 +14,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet"
 
+import { Toaster } from "@/components/ui/toaster"
+
+
 
 
 function App() {
   const [loading, setLoading] = useState(true)
   const [spinning, setSpinning] = useState(true)
+  const loadingScreen = useRef<HTMLDivElement | null>(null)
   useEffect(()=>{
     if(spinning) {
       setTimeout(()=>{
@@ -33,14 +37,24 @@ function App() {
       },2500)
     }
   },[loading])
+
+  useEffect(()=> {
+    if(!loading){
+      setTimeout(()=> {
+        if(loadingScreen && loadingScreen.current){
+          loadingScreen.current.remove()
+        }
+      },1000)
+    }
+  },[loading])
   return (
-    <div className='flex flex-col items-center w-full h-full min-h-screen pt-4 pb-12 bg-none font-main'>
+    <div className='flex flex-col items-center w-full h-full min-h-screen pt-4 pb-20 border-4 border-white bg-none font-main'>
       <Borders />
       <div className={` z-10 flex flex-col items-center justify-center w-full h-full max-w-6xl gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
         <Content />
       </div>
       <Smoke/>
-      <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-screen ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `}>
+      <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-screen ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `} ref={loadingScreen}>
         {
         spinning &&
         <InfinitySpin
@@ -53,6 +67,8 @@ function App() {
         
 
       </div>
+
+      <Toaster />
     </div>
   )
 }
