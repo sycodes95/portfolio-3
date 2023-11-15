@@ -20,7 +20,7 @@ export function Toaster() {
             <div className="grid gap-1">
               {title && <ToastTitle className="text-lg">{title}</ToastTitle>}
               {description && (
-                <ToastDescription className="flex items-center gap-2 text-sm font-bold">{description} <a href="https://gmail.com/" target="_blank"><img className="object-contain w-8 h-8" src={gmailIcon} /></a> </ToastDescription>
+                <ToastDescription className="flex items-center gap-2 text-sm font-bold">{description} <a href="https://gmail.com/" target="_blank"><img className="object-contain w-8 h-8 transition-all duration-700 hover:grayscale" src={gmailIcon} /></a> </ToastDescription>
               )}
             </div>
             {action}
