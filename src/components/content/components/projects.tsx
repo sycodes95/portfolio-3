@@ -36,7 +36,7 @@ export default function Projects () {
 
   const projects = [
     { 
-      name: 'Daynestmetrics', 
+      name: 'daynestmetrics', 
       description: 'Track your lifestyle habits or factors in order to find correlations with mood and productivity. Featuring interactive data visualizations, calendar view, table view, and more!',
       images: [ 
         {
@@ -82,7 +82,7 @@ export default function Projects () {
       youtubeUrl: 'https://www.youtube.com/@untalentedwebdev'
     },
     { 
-      name: 'Polyglot Pal', 
+      name: 'polyglot pal', 
       description: 'Polyglot Pal is designed to help language learners improve their speaking and communication skills with the help of AI, in a specific language and level of your choice.', 
       images: [
         { src: pgpLandingPage, description: ''},
@@ -93,7 +93,7 @@ export default function Projects () {
       youtubeUrl: 'https://youtu.be/PJjk4Qg_GiU?si=eZEPVYk85dUh1vJh&t=574'
     },
     { 
-      name: 'Jobtrackr', 
+      name: 'jobtrackr', 
       description: 'Jobtrackr was created to help job seeker keep track of applications and find ways to improve their job seeking strategies using data visualization tools', 
       images: [
         { src: jtLogin, description: ''},
@@ -124,7 +124,7 @@ export default function Projects () {
 
             <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-4 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
               <SheetTitle className='flex items-center justify-between '>
-                <span className='text-3xl font-glow-white'>{proj.name}</span>
+                <span className='text-4xl text-black md:text-5xl font-outline-white'>{proj.name}</span>
                 
               </SheetTitle>
               
@@ -136,7 +136,7 @@ export default function Projects () {
                 }
               </div>
               {
-              proj.name === 'Daynestmetrics' &&
+              proj.name === 'daynestmetrics' &&
               <Alert className='border'>
                 <RocketIcon className="w-4 h-4" />
                 <AlertTitle>I built a big portion of this project in public on my youtube channel!</AlertTitle>
@@ -149,7 +149,7 @@ export default function Projects () {
               </Alert>
               }
               {
-              proj.name === 'Polyglot Pal' &&
+              proj.name === 'polyglot pal' &&
               <Alert className='border'>
                 <RocketIcon className="w-4 h-4" />
                 <AlertTitle>This project won the honorable mention category of an online hackathon.</AlertTitle>

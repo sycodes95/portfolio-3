@@ -23,9 +23,9 @@ import About from "./components/about";
 
 export default function Content () {
 
-  const gridNumbers = Array(100).fill('')
+  const gridNumbers = Array(200).fill('')
   return (
-    <div className="z-10 flex flex-col items-center w-full gap-12 p-8 md:w-fit">
+    <div className="z-10 flex flex-col items-center justify-center w-full h-full gap-12 p-8 overflow-hidden md:w-fit grow">
       <Title />
 
       <SocialMedia />
@@ -42,7 +42,7 @@ export default function Content () {
       <div className="absolute top-0 left-0 grid w-full h-full grid-flow-col overflow-hidden -z-10 min-w-screen">
         {
         gridNumbers.map((_,index) => (
-          <div className="w-[20px] border-r-2 border-r-black border-opacity-5" key={index}>
+          <div className="w-[10px] border-r border-r-black border-opacity-5" key={index}>
             
           </div>
         ))
@@ -52,7 +52,7 @@ export default function Content () {
       <div className="absolute top-0 left-0 grid w-full h-full max-h-screen grid-flow-row overflow-hidden -z-10 min-w-screen max-w-screen">
         {
         gridNumbers.map((_,index) => (
-          <div className="h-[20px] border-b-2 border-b-black border-opacity-5" key={index}>
+          <div className="h-[10px] border-b border-b-black border-opacity-5 " key={index}>
             
           </div>
         ))

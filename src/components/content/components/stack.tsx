@@ -1,14 +1,15 @@
+import { Padding } from "@mui/icons-material"
 
 
 export default function Stack () {
 
   const skills = [
-    { name: 'react.js', icon: <i className="text-2xl text-center text-white rounded-full devicon-react-original"></i>},
-    { name: 'next.js', icon: <i className="text-2xl text-white devicon-nextjs-original"></i>},
-    { name: 'typescript', icon: <i className="text-2xl devicon-typescript-plain"></i>},
-    { name: 'tailwindcss', icon:  <i className="text-2xl text-white devicon-tailwindcss-plain"></i>},
-    { name: 'node.js', icon: <i className="text-2xl text-white devicon-nodejs-plain"></i>},
-    { name: 'postgresql', icon:<i className="text-2xl text-white devicon-postgresql-plain"></i> },
+    { name: 'react.js', icon: <i className="text-2xl text-center text-white rounded-full devicon-react-original"></i>, padding: 'pl-0'},
+    { name: 'next.js', icon: <i className="text-2xl text-white devicon-nextjs-original"></i>, padding: 'pl-2'},
+    { name: 'typescript', icon: <i className="text-2xl devicon-typescript-plain"></i>, padding: 'pl-4'},
+    { name: 'tailwindcss', icon:  <i className="text-2xl text-white devicon-tailwindcss-plain"></i>, padding: 'pl-6'},
+    { name: 'node.js', icon: <i className="text-2xl text-white devicon-nodejs-plain"></i>, padding: 'pl-8'},
+    { name: 'postgresql', icon:<i className="text-2xl text-white devicon-postgresql-plain"></i> , padding: 'pl-10'},
   ]
 
   
@@ -24,7 +25,7 @@ export default function Stack () {
         {
         skills.map((skill, index) => (
           <div className="flex items-end justify-between gap-2">
-            <span className={`pl-2 mb-1 text-xl`}>{skill.name}</span>
+            <span className={` mb-1 text-xl ${skill.padding}`}>{skill.name}</span>
             {skill.icon}
           </div>
         ))
