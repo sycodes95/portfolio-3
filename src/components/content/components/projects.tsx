@@ -89,7 +89,7 @@ export default function Projects () {
         { src: pgpApp, description: ''},
       ], 
       websiteUrl: 'https://polyglotpal.up.railway.app/',
-      stack: [],
+      stack: ['react.js', 'typescript', 'tailwindcss', 'convex'],
       youtubeUrl: 'https://youtu.be/PJjk4Qg_GiU?si=eZEPVYk85dUh1vJh&t=574'
     },
     { 
@@ -122,7 +122,7 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-4xl">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-4 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
+            <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-8 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
               <SheetTitle className='flex items-center justify-between '>
                 <span className='text-4xl text-black transition-all duration-500 md:text-6xl lg:text-7xl font-outline-white'>{proj.name}</span>
                 
@@ -137,9 +137,9 @@ export default function Projects () {
               </div>
               {
               proj.name === 'daynestmetrics' &&
-              <Alert className='text-lg border'>
+              <Alert className='text-lg border-t-0 border-b-0 border-l-4 border-r-0'>
                 <RocketIcon className="w-4 h-4" />
-                <AlertTitle>I built a big portion of this project in public on my youtube channel!</AlertTitle>
+                <AlertTitle className='mb-2'>I built a big portion of this project in public on my youtube channel!</AlertTitle>
                 <AlertDescription className=''>
                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
                     <YouTubeIcon />
@@ -150,9 +150,9 @@ export default function Projects () {
               }
               {
               proj.name === 'polyglot pal' &&
-              <Alert className='border'>
+              <Alert className='text-lg border-t-0 border-b-0 border-l-4 border-r-0'>
                 <RocketIcon className="w-4 h-4" />
-                <AlertTitle>This project won the honorable mention category of an online hackathon.</AlertTitle>
+                <AlertTitle className='mb-2'>This project won the honorable mention category of an online hackathon.</AlertTitle>
                 <AlertDescription className=''>
                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
                     <YouTubeIcon />
@@ -161,9 +161,9 @@ export default function Projects () {
                 </AlertDescription>
               </Alert>
               }
-              <SheetDescription className='flex flex-col p-4 text-sm font-semibold text-white border border-white opacity-75 '>
+              <SheetDescription className='flex flex-col p-4 font-semibold text-white border-t-0 border-b-0 border-l-4 border-r-0 border-white opacity-75 '>
                 <span className='text-lg font-bold'>Description</span>
-                <span>{proj.description}</span>
+                <span className='text-sm'>{proj.description}</span>
               </SheetDescription>
               <div className='grid grid-cols-1 gap-4 grow'>
                 {
@@ -172,7 +172,9 @@ export default function Projects () {
                     <img className='transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70' key={data.src} src={data.src} />
                     {
                     data.description &&
-                    <div className='absolute w-full max-h-full p-4 overflow-y-auto text-sm transition-all duration-700 bg-black -bottom-full group-hover:bottom-0 bg-opacity-90'>{data.description}</div>
+                    <div className='absolute w-full max-h-full p-4 overflow-y-auto text-sm transition-all duration-700 bg-black -bottom-full group-hover:bottom-0 bg-opacity-90'>
+                      <div className='p-4 font-bold border-l border-r'>{data.description}</div>
+                    </div>
                     }
                   </div>
                 ))
