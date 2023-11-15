@@ -5,14 +5,6 @@ import Smoke from './components/smokeThreeJs/smokeThreeJs'
 import Content from './components/content/content'
 import Borders from './components/borders/borders'
 import { useEffect, useRef, useState } from 'react'
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
 
 import { Toaster } from "@/components/ui/toaster"
 

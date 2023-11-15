@@ -15,9 +15,9 @@ import PsychologyIcon from '@mui/icons-material/Psychology';
 
 
 export default function About () {
-  const peopleWhoInspireMe = [
+  // const peopleWhoInspireMe = [
     
-  ]
+  // ]
   return (
     <Sheet>
       <SheetTrigger className="group">

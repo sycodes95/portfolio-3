@@ -1,4 +1,3 @@
-import { Padding } from "@mui/icons-material"
 
 
 export default function Stack () {
@@ -23,7 +22,7 @@ export default function Stack () {
 
       <div className="flex flex-col w-64 h-full p-2">
         {
-        skills.map((skill, index) => (
+        skills.map((skill) => (
           <div className="flex items-end justify-between gap-2">
             <span className={` mb-1 text-xl ${skill.padding}`}>{skill.name}</span>
             {skill.icon}

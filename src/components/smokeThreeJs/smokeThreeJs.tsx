@@ -1,7 +1,6 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 const Smoke: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);

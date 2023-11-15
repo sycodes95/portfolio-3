@@ -1,23 +1,7 @@
 import Title from "./components/title";
-import { mdiDna } from '@mdi/js';
-import { mdiInformationVariant } from '@mdi/js';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import { mdiHeadHeart } from '@mdi/js';
-import AudiotrackIcon from '@mui/icons-material/Audiotrack';
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-  SheetClose
-} from "@/components/ui/sheet"
 import SocialMedia from "./components/socialMedia";
 import Stack from "./components/stack";
 import Projects from "./components/projects";
-import InfoIcon from '@mui/icons-material/Info';
-import Icon from "@mdi/react";
 import About from "./components/about";
 
 

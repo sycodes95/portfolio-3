@@ -1,4 +1,3 @@
-import { div } from 'three/examples/jsm/nodes/Nodes.js'
 import dnmDashboard from '../../../assets/projectPictures/daynestmetrics/dashboard.png'
 import dnmEntries from '../../../assets/projectPictures/daynestmetrics/entries.png'
 import dnmInsights from '../../../assets/projectPictures/daynestmetrics/insights.png'
@@ -26,7 +25,6 @@ import {
   Sheet,
   SheetContent,
   SheetDescription,
-  SheetHeader,
   SheetTitle,
   SheetTrigger,
   SheetClose
@@ -130,7 +128,7 @@ export default function Projects () {
               
               <div className='flex flex-wrap items-center gap-2 text-lg' >
                 {
-                proj.stack.map((tech, index) => (
+                proj.stack.map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))
                 }
@@ -167,7 +165,7 @@ export default function Projects () {
               </SheetDescription>
               <div className='grid grid-cols-1 gap-4 grow'>
                 {
-                proj.images.map((data, index) => (
+                proj.images.map((data) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group'>
                     <img className='transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70' key={data.src} src={data.src} />
                     {
