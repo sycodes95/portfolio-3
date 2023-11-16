@@ -77,7 +77,8 @@ export default function Projects () {
       ], 
       stack: ['react.js', 'next.js', 'typescript', 'tailwindcss', 'postgresql'],
       websiteUrl: 'https://daynestmetrics.up.railway.app/',
-      youtubeUrl: 'https://www.youtube.com/@untalentedwebdev'
+      youtubeUrl: 'https://www.youtube.com/@untalentedwebdev',
+      // youtubeDemo: <iframe className='w-full' width="" height="500" src="https://www.youtube.com/embed/KnOYuX3RQzY?si=-fx7s8GUscBLm87T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     },
     { 
       name: 'polyglot pal', 
@@ -163,6 +164,9 @@ export default function Projects () {
                 <span className='text-lg font-bold'>Description</span>
                 <span className='text-sm'>{proj.description}</span>
               </SheetDescription>
+              <div className='w-full h-full'>
+                {proj.youtubeDemo}
+              </div>
               <div className='grid grid-cols-1 gap-4 grow'>
                 {
                 proj.images.map((data) => (
