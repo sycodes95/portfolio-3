@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 
 const Smoke: React.FC = () => {
+  
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ const Smoke: React.FC = () => {
     scene.background = new THREE.Color(0xffffff);
 
     renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
 
     // Add the renderer to the DOM
     mountRef.current!.appendChild(renderer.domElement);
@@ -65,7 +66,7 @@ const Smoke: React.FC = () => {
       particle.position.set(
         Math.random() * 500 - 250,
         Math.random() * 500 - 200,
-        Math.random() * 1000 - 100
+        Math.random() * 1000 - 500
       );
       particle.rotation.z = Math.random() * 360;
       scene.add(particle);
@@ -96,7 +97,7 @@ const Smoke: React.FC = () => {
     const handleResize = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
     };
 
     // Listeners
@@ -118,7 +119,7 @@ const Smoke: React.FC = () => {
   }, []);
 
   return (
-      <div ref={mountRef} className="fixed top-0 Smoke" />
+      <div ref={mountRef} className="fixed transition-all duration-500 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 Smoke" />
   )
   
 };

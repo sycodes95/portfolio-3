@@ -10,7 +10,6 @@ export default function Stack () {
     { name: 'node.js', icon: <i className="text-2xl text-white devicon-nodejs-plain"></i>, padding: 'pl-8'},
     { name: 'postgresql', icon:<i className="text-2xl text-white devicon-postgresql-plain"></i> , padding: 'pl-10'},
   ]
-
   
   return (
     <div className="relative flex">
