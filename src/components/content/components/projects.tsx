@@ -85,7 +85,7 @@ export default function Projects () {
       description: 'Polyglot Pal is designed to help language learners improve their speaking and communication skills with the help of AI, in a specific language and level of your choice.', 
       images: [
         { src: pgpLandingPage, description: ''},
-        { src: pgpApp, description: ''},
+        { src: pgpApp, description: 'The user can either speak to the AI using their microphone, or text and you can also control whether the AI speaks to you or only texts you back. If you wish the save the settings set for a specific conversation you can simply click save and the conversation will be added on the left hand side. '},
       ], 
       websiteUrl: 'https://polyglotpal.up.railway.app/',
       stack: ['react.js', 'typescript', 'tailwindcss', 'convex'],
@@ -101,7 +101,7 @@ export default function Projects () {
         { src: jtTable, description: 'Table view of all job applications. Features sorting by columns, filtering, and pagination.'},
       ], 
       websiteUrl: 'https://jobtrackr.pro',
-      stack: [],
+      stack: ['react.js', 'tailwindcss', 'node.js', 'express.js', 'postgresql'],
       youtubeUrl: ''
     },
   ]
