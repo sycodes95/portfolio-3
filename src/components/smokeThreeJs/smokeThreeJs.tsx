@@ -94,14 +94,14 @@ const Smoke: React.FC = () => {
     };
 
     // Handle resize
-    const handleResize = () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
-    };
+    // const handleResize = () => {
+    //   camera.aspect = window.innerWidth / window.innerHeight;
+    //   camera.updateProjectionMatrix();
+    //   renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
+    // };
 
-    // Listeners
-    window.addEventListener('resize', handleResize);
+    // // Listeners
+    // window.addEventListener('resize', handleResize);
 
     // Start animation
     animate();
@@ -109,7 +109,7 @@ const Smoke: React.FC = () => {
     // Cleanup
     return () => {
       mountRef.current!.removeChild(renderer.domElement);
-      window.removeEventListener('resize', handleResize);
+      // window.removeEventListener('resize', handleResize);
       smokeParticles.forEach(particle => scene.remove(particle));
       geometry.dispose();
       material.dispose();
