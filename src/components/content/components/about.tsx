@@ -12,12 +12,21 @@ import { mdiDna } from '@mdi/js';
 import InfoIcon from '@mui/icons-material/Info';
 import AudiotrackIcon from '@mui/icons-material/Audiotrack';
 import PsychologyIcon from '@mui/icons-material/Psychology';
+import tonyFerg from '../../../assets/people/tonyFerg.webp'
+import davidGoggins from '../../../assets/people/davidGoggins.webp'
+import sonHeungMin from '../../../assets/people/sonHeungMin.webp'
+import frankYang from '../../../assets/people/frankYang.webp'
 
 
 export default function About () {
-  // const peopleWhoInspireMe = [
+  const peopleWhoInspireMe = [
+    { name : 'Tony Ferguson', src: tonyFerg, occupation: 'El Cucuy'},
+    { name : 'Son Heung Min', src: sonHeungMin, occupation: 'Soccer Player'},
+    { name : 'David Goggins', src: davidGoggins, occupation: 'Full-time savage'},
+    { name : 'Frank Yang', src: frankYang, occupation: 'Infinite Brah'        }
+
     
-  // ]
+  ]
   return (
     <Sheet>
       <SheetTrigger className="group">
@@ -56,10 +65,22 @@ export default function About () {
             <div className="flex flex-col items-start gap-2">
               <div className="flex items-center gap-2">
                 <PsychologyIcon/>
-                <span className="text-lg font-bold">people who inspire me</span>
+                <span className="text-lg font-bold">people i like</span>
               </div>
-              <div className="flex flex-col gap-2 pl-6 ml-3 text-lg border-l border-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat animi, magnam exercitationem expedita quia omnis saepe reiciendis dolor beatae cupiditate excepturi temporibus. Impedit doloribus corrupti vel, officia expedita repellendus repellat!
+              <div className="grid items-center w-full grid-cols-2 gap-4 p-4 pl-6 ml-3 text-lg border-l border-white lg:grid-cols-4">
+                {
+                peopleWhoInspireMe.map((person) => (
+                  <div className="flex flex-col items-center gap-2">
+                    <img className="object-cover rounded-full w-14 h-14" src={person.src} />
+                    <div className="flex flex-col items-center">
+                      <span >{person.name}</span>
+                      <span className="text-sm font-bold">{person.occupation}</span>
+                    </div>
+                    
+
+                  </div>
+                ))
+                }
               </div>
             </div>
 
