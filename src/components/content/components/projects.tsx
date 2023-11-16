@@ -164,9 +164,11 @@ export default function Projects () {
                 <span className='text-lg font-bold'>Description</span>
                 <span className='text-sm'>{proj.description}</span>
               </SheetDescription>
-              <div className='w-full h-full'>
+
+              
+              {/* <div className='w-full h-full'>
                 {proj.youtubeDemo}
-              </div>
+              </div> */}
               <div className='grid grid-cols-1 gap-4 grow'>
                 {
                 proj.images.map((data) => (
