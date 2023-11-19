@@ -6,8 +6,8 @@ import { useToast } from '@/components/ui/use-toast';
       
 
 export default function SocialMedia () {
-  const { toast } = useToast()
-  const email = "sycodes95@gmail.com"
+  // const { toast } = useToast()
+  // const email = "sycodes95@gmail.com"
   const links = [
     { href : "https://github.com/sycodes95", icon : <GitHubIcon className="w-5 h-5 " />, cn:'text-white hover:text-gray-500 transition-colors duration-300'},
     { href : "https://www.youtube.com/@untalentedwebdev", icon : <YouTubeIcon className="w-5 h-5 " />, cn:'text-white hover:text-red-500 transition-colors duration-300'},
