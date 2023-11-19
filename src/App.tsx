@@ -46,7 +46,7 @@ function App() {
         <Content />
       </div>
       <Smoke/>
-      <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-screen ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `} ref={loadingScreen}>
+      {/* <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-screen ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `} ref={loadingScreen}>
         {
         spinning &&
         <InfinitySpin
@@ -58,7 +58,7 @@ function App() {
 
         
 
-      </div>
+      </div> */}
 
       <Toaster />
     </div>

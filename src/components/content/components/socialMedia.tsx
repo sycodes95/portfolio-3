@@ -37,11 +37,11 @@ export default function SocialMedia () {
   };
   return (
     <div className="fixed bottom-0 z-40 flex flex-col items-center justify-center p-2 pb-0 bg-black border-8 border-b-0 border-white w-fit backdrop-blur-md bg-opacity-90">
-      <button className='flex items-center h-10 gap-2 p-2 font-bold text-white transition-colors bg-black bg-opacity-50 backdrop-blur-md bottom-10 hover:text-gray-400' onClick={()=> copyToClipboard()}>
+      {/* <button className='flex items-center h-10 gap-2 p-2 text-sm font-bold text-white transition-colors bg-black bg-opacity-50 backdrop-blur-md bottom-10 hover:text-gray-400' onClick={()=> copyToClipboard()}>
         <span>{email}</span>
-        <ContentCopyIcon fontSize='small'/>
-      </button>
-      <div className='flex items-center justify-center gap-4 p-2 border-t '>
+        <ContentCopyIcon className='text-[20px]' fontSize='small'/>
+      </button> */}
+      <div className='flex items-center justify-center gap-4 p-2 '>
         {
         links.map((data) => (
           <a className={`${data.cn} flex items-center justify-center object-contain w-8 h-6 `} href={data.href} target='_blank'>{data.icon}</a>

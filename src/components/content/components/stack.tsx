@@ -23,7 +23,7 @@ export default function Stack () {
         {
         skills.map((skill) => (
           <div className="flex items-end justify-between gap-2">
-            <span className={` mb-1 text-xl ${skill.padding}`}>{skill.name}</span>
+            <span className={` mb-1 text-lg md:text-xl ${skill.padding}`}>{skill.name}</span>
             {skill.icon}
           </div>
         ))

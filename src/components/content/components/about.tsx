@@ -24,8 +24,6 @@ export default function About () {
     { name : 'Son Heung Min', src: sonHeungMin, occupation: 'Soccer Player'},
     { name : 'David Goggins', src: davidGoggins, occupation: 'Full-time savage'},
     { name : 'Frank Yang', src: frankYang, occupation: 'Infinite Brah'        }
-
-    
   ]
   return (
     <Sheet>

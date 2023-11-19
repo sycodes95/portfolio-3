@@ -118,7 +118,7 @@ export default function Projects () {
         projects.map((proj, index) => (
           <Sheet >
             <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-stone-500">
-              <span className="pl-2 mb-1 text-4xl">{index + 1}. {proj.name}</span>
+              <span className="pl-2 mb-1 text-2xl md:text-4xl">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
             <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-8 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
