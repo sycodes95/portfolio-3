@@ -32,7 +32,7 @@ export default function About () {
           <Icon className="text-black transition-all duration-500 text-opacity-80 group-hover:text-white " path={mdiDna} size={1.5} />
         </div>
       </SheetTrigger>
-      <SheetContent className="flex flex-col w-full max-h-screen overflow-y-auto text-lg text-white bg-black border-none bg-opacity-90 md:-translate-x-1/2 h-fit min-h-fit md:w-1/2 font-main md:left-1/2" side={'bottom'}>
+      <SheetContent className="flex flex-col w-full h-full max-h-[100dvh] overflow-y-auto text-lg text-white bg-black border-none bg-opacity-90 md:-translate-x-1/2 min-h-fit md:w-1/2 font-main md:left-1/2" side={'bottom'}>
         <SheetHeader className="flex flex-col gap-4">
           <SheetTitle className="flex items-center justify-center w-full text-2xl">
             <Icon className="text-white duration-500 text-opacity-80" path={mdiDna} size={1.5} />
