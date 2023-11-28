@@ -22,7 +22,7 @@ export default function Stack () {
       <div className="flex flex-col w-64 h-full p-2">
         {
         skills.map((skill) => (
-          <div className="flex items-end justify-between gap-2">
+          <div className="flex items-end justify-between gap-2" key={skill.name}>
             <span className={` mb-1 text-lg md:text-xl ${skill.padding}`}>{skill.name}</span>
             {skill.icon}
           </div>

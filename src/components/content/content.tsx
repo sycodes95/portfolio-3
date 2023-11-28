@@ -22,38 +22,14 @@ export default function Content () {
       })
       console.log('Email copied to clipboard');
 
-      // Optionally, show some feedback to the user here
     } catch (err) {
       console.error('Failed to copy: ', err);
       toast({
         title: "Error copying to clipboard",
         description: ":(",
       })
-      // Optionally, handle the error case
     }
   };
-
- 
-
-  // useEffect(() => {
-  //   const myAtropos = Atropos({
-  //     el: '.my-atropos',
-  //     activeOffset: 80,
-  //     shadow: false,
-  //     highlight: false,
-  //   });
-  //   const handleResize = () => {
-      
-  //   };
-
-  //   window.addEventListener('resize', handleResize);
-  //   handleResize();
-
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //     myAtropos.destroy();
-  //   }
-  // }, []); 
 
   return (
     <div className={`z-50 flex flex-col items-center justify-center w-full h-full gap-12 pt-12 pb-24 overflow-hidden grow`} ref={contentContainer}>

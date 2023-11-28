@@ -68,7 +68,7 @@ export default function About () {
               <div className="grid items-center w-full grid-cols-2 gap-4 p-4 pl-6 ml-3 text-lg border-l border-white xl:grid-cols-4">
                 {
                 peopleWhoInspireMe.map((person) => (
-                  <div className="flex flex-col items-center gap-2 p-4 border border-white">
+                  <div className="flex flex-col items-center gap-2 p-4 border border-white" key={person.name}>
                     <img className="object-cover w-20 h-20 rounded-full" src={person.src} />
                     <div className="flex flex-col items-center">
                       <span className="overflow-hidden whitespace-nowrap text-ellipsis">{person.name}</span>
