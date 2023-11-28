@@ -56,14 +56,16 @@ function App() {
     <div className='flex flex-col items-center w-full h-full min-h-screen bg-white border-4 border-white font-main'>
       <Borders />
       <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
-        {
+        {/* {
         atroposEnabled ? 
         <AtroposEffect>
           <Content />
         </AtroposEffect>
         :
         <Content/>
-        }
+        } */}
+
+        <Content />
         
         <SocialMedia />
       </div>
