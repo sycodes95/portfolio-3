@@ -5,7 +5,7 @@ import About from "./components/about";
 import { useToast } from '@/components/ui/use-toast';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 
 export default function Content () {
