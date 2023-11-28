@@ -1,15 +1,14 @@
 
 import './App.css'
+import 'atropos/css'
+
 import { InfinitySpin } from  'react-loader-spinner'
 import Smoke from './components/smokeThreeJs/smokeThreeJs'
 import Content from './components/content/content'
 import Borders from './components/borders/borders'
 import { useEffect, useRef, useState } from 'react'
-
 import { Toaster } from "@/components/ui/toaster"
-
-
-
+import SocialMedia from './components/content/components/socialMedia'
 
 function App() {
   const [loading, setLoading] = useState(true)
@@ -40,13 +39,14 @@ function App() {
     }
   },[loading])
   return (
-    <div className='flex flex-col items-center w-full h-full min-h-screen pt-4 pb-20 border-4 border-white bg-none font-main'>
+    <div className='flex flex-col items-center w-screen h-full min-h-screen border-4 border-white bg-none font-main'>
       <Borders />
-      <div className={` z-10 flex flex-col items-center justify-center w-full h-full max-w-6xl gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
+      <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
         <Content />
+        <SocialMedia />
       </div>
       <Smoke/>
-      <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-[100dvh] ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `} ref={loadingScreen}>
+      {/* <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-[100dvh] ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `} ref={loadingScreen}>
         {
         spinning &&
         <InfinitySpin
@@ -58,7 +58,7 @@ function App() {
 
         
 
-      </div>
+      </div> */}
 
       <Toaster />
     </div>

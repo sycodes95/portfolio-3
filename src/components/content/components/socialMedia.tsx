@@ -37,7 +37,7 @@ export default function SocialMedia () {
 
   
   return (
-    <div className="fixed bottom-0 z-40 flex flex-col items-center justify-center p-2 pb-0 bg-black border-8 border-b-0 border-white w-fit backdrop-blur-md bg-opacity-90">
+    <div className="fixed bottom-0 z-[60] flex flex-col items-center justify-center p-2 pb-0 bg-black border-8 border-b-0 border-white w-fit backdrop-blur-md bg-opacity-90">
       {/* <button className='flex items-center h-10 gap-2 p-2 text-sm font-bold text-white transition-colors bg-black bg-opacity-50 backdrop-blur-md bottom-10 hover:text-gray-400' onClick={()=> copyToClipboard()}>
         <span>{email}</span>
         <ContentCopyIcon className='text-[20px]' fontSize='small'/>
