@@ -8,11 +8,14 @@ import Borders from './components/borders/borders'
 import { useEffect, useRef, useState } from 'react'
 import { Toaster } from "@/components/ui/toaster"
 import SocialMedia from './components/content/components/socialMedia'
+import AtroposEffect from './components/content/components/atroposEffect'
 
 function App() {
   const [loading, setLoading] = useState(true)
   const [spinning, setSpinning] = useState(true)
+  const [atroposEnabled, setAtroposEnabled] = useState(true)
   const loadingScreen = useRef<HTMLDivElement | null>(null)
+  
   useEffect(()=>{
     if(spinning) {
       setTimeout(()=>{
@@ -37,11 +40,30 @@ function App() {
       },1000)
     }
   },[loading])
+
+  useEffect(()=> {
+    const handleResize = () => {
+      window.innerWidth > 768 ? setAtroposEnabled(true) : setAtroposEnabled(false);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  },[])
   return (
     <div className='flex flex-col items-center w-full h-full min-h-screen bg-white border-4 border-white font-main'>
       <Borders />
       <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
-        <Content />
+        {
+        atroposEnabled ? 
+        <AtroposEffect>
+          <Content />
+        </AtroposEffect>
+        :
+        <Content/>
+        }
+        
         <SocialMedia />
       </div>
       <Smoke/>
