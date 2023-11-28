@@ -2,7 +2,6 @@
 import './App.css'
 import 'atropos/css'
 
-import { InfinitySpin } from  'react-loader-spinner'
 import Smoke from './components/smokeThreeJs/smokeThreeJs'
 import Content from './components/content/content'
 import Borders from './components/borders/borders'

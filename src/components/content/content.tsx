@@ -1,5 +1,4 @@
 import Title from "./components/title";
-import SocialMedia from "./components/socialMedia";
 import Stack from "./components/stack";
 import Projects from "./components/projects";
 import About from "./components/about";
@@ -7,7 +6,7 @@ import { useToast } from '@/components/ui/use-toast';
 
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Atropos from 'atropos';
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 
 export default function Content () {
@@ -79,7 +78,7 @@ export default function Content () {
 
   },[])
 
-  const gridNumbers = Array(200).fill('')
+  // const gridNumbers = Array(200).fill('')
   return (
     <div className={`z-50 flex flex-col items-center justify-center w-full h-full gap-12 pt-12 pb-24 overflow-hidden grow atropos my-atropos`} ref={contentContainer}>
       <div className="flex w-full h-full atropos-scale">
