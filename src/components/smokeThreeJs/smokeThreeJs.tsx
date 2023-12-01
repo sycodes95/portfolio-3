@@ -1,6 +1,7 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import smokeElementImage from '../../assets/smoke/Smoke-Element.webp'
 
 const Smoke: React.FC = () => {
   
@@ -34,7 +35,7 @@ const Smoke: React.FC = () => {
     scene.background = new THREE.Color(0xffffff);
 
     renderer = new THREE.WebGLRenderer({ alpha: true });
-    renderer.setSize(window.innerWidth * 2, window.innerHeight * 2);
+    renderer.setSize(window.innerWidth * 1, window.innerHeight * 1);
 
     // Add the renderer to the DOM
     mountRef.current!.appendChild(renderer.domElement);
@@ -52,21 +53,21 @@ const Smoke: React.FC = () => {
 
     // Add smoke
     smokeTexture = new THREE.TextureLoader().load(
-      'https://s3-us-west-2.amazonaws.com/s.cdpn.io/95637/Smoke-Element.png'
+      smokeElementImage
     );
     smokeMaterial = new THREE.MeshLambertMaterial({
-      color: 0x353030,
+      color: 0x303030,
       map: smokeTexture,
       transparent: true
     });
     const smokeGeo = new THREE.PlaneGeometry(300, 300);
 
-    for (let p = 0; p < 200; p++) {
+    for (let p = 0; p < 222; p++) {
       const particle = new THREE.Mesh(smokeGeo, smokeMaterial);
       particle.position.set(
         Math.random() * 500 - 250,
         Math.random() * 500 - 200,
-        Math.random() * 1000 - 500
+        Math.random() * 1000 - 250
       );
       particle.rotation.z = Math.random() * 360;
       scene.add(particle);
@@ -93,6 +94,16 @@ const Smoke: React.FC = () => {
       renderer.render(scene, camera);
     };
 
+    const handleResize = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.updateProjectionMatrix();
+    };
+
+    window.addEventListener('resize', handleResize);
+
     animate();
 
     return () => {
@@ -103,6 +114,7 @@ const Smoke: React.FC = () => {
       material.dispose();
       smokeMaterial.dispose();
       smokeTexture.dispose();
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 

@@ -66,7 +66,6 @@ function App() {
         } */}
 
         <Content />
-        
         <SocialMedia />
       </div>
       <Smoke/>

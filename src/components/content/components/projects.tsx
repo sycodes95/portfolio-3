@@ -121,13 +121,13 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-2xl md:text-4xl">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col w-full h-full max-w-full max-h-screen gap-8 pt-16 pb-12 overflow-y-auto bg-black bg-opacity-90 lg:w-1/2 border-t-black font-main' side={'bottom'}>
+            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-8 pt-16 pb-12 overflow-y-auto text-black bg-white bg-opacity-70 lg:w-1/2 border-t-black font-main' side={'bottom'}>
               <SheetTitle className='flex items-center justify-between '>
-                <span className='text-4xl text-black transition-all duration-500 md:text-6xl lg:text-7xl font-outline-white'>{proj.name}</span>
+                <span className='text-4xl text-black transition-all duration-500 md:text-6xl lg:text-7xl font-outline-black'>{proj.name}</span>
                 
               </SheetTitle>
               
-              <div className='flex flex-wrap items-center gap-2 text-lg' >
+              <div className='flex flex-wrap items-center justify-center pl-2 pr-2 text-lg text-white bg-black border border-black gap-x-2' >
                 {
                 proj.stack.map((tech) => (
                   <span key={tech}>{tech}</span>
