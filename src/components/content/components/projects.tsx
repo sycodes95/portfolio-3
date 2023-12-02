@@ -17,14 +17,12 @@ import jtEntry from '../../../assets/projectPictures/jobtrackr/application-entry
 import DescriptionIcon from '@mui/icons-material/Description';
 
 
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { RocketIcon } from "@radix-ui/react-icons"
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
   SheetTitle,
   SheetTrigger,
   SheetClose
