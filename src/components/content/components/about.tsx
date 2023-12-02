@@ -28,21 +28,21 @@ export default function About () {
   return (
     <Sheet>
       <SheetTrigger className="group">
-        <div className="flex items-center justify-center text-white transition-all duration-500 bg-white rounded-full cursor-pointer w-36 h-36 hover:bg-black hover:bg-opacity-0 group box-glow-dna">
-          <Icon className="text-black transition-all duration-500 text-opacity-80 group-hover:text-white " path={mdiDna} size={1.5} />
+        <div className="flex items-center justify-center text-white transition-all duration-700 bg-white rounded-full cursor-pointer w-36 h-36 hover:bg-black hover:bg-opacity-0 group box-glow-dna">
+          <Icon className="text-black transition-all duration-700 text-opacity-80 group-hover:text-white " path={mdiDna} size={1.5} />
         </div>
       </SheetTrigger>
-      <SheetContent className="flex flex-col w-full h-full max-h-[100dvh] overflow-y-auto text-lg text-white bg-black border-none bg-opacity-90 md:-translate-x-1/2 min-h-fit md:w-1/2 font-main md:left-1/2" side={'bottom'}>
+      <SheetContent className="flex flex-col w-full h-full max-h-[100dvh] overflow-y-auto text-lg text-black bg-white border-none bg-opacity-75 md:-translate-x-1/2 min-h-fit md:w-1/2 font-main md:left-1/2" side={'bottom'}>
         <SheetHeader className="flex flex-col gap-4">
           <SheetTitle className="flex items-center justify-center w-full text-2xl">
-            <Icon className="text-white duration-500 text-opacity-80" path={mdiDna} size={1.5} />
+            <Icon className="text-black duration-700 text-opacity-90" path={mdiDna} size={1.5} />
           </SheetTitle>
           <SheetDescription className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <InfoIcon/>
               <span className="text-lg font-bold">my story</span>
             </div>
-            <div className="flex flex-col gap-2 pl-6 ml-3 text-left border-l border-white">
+            <div className="flex flex-col gap-2 pl-6 ml-3 text-left border-l border-black">
               <span className="text-lg font-main">
                 I initially got into programming due to my realization of how useful it could be to learn this skill, especially because tech is where the future is headed.
                 My journey started with telling myself that I will fully commit to learning this craft for 1 month to see if it's something I could 
@@ -65,10 +65,10 @@ export default function About () {
                 <PsychologyIcon/>
                 <span className="text-lg font-bold">people i like</span>
               </div>
-              <div className="grid items-center w-full grid-cols-2 gap-4 p-4 pl-6 ml-3 text-lg border-l border-white xl:grid-cols-4">
+              <div className="grid items-center w-full grid-cols-2 gap-4 p-4 pl-6 ml-3 text-lg border-l border-black xl:grid-cols-4">
                 {
                 peopleWhoInspireMe.map((person) => (
-                  <div className="flex flex-col items-center gap-2 p-4 border border-white" key={person.name}>
+                  <div className="flex flex-col items-center gap-2 p-4 border border-black" key={person.name}>
                     <img className="object-cover w-20 h-20 rounded-full" src={person.src} />
                     <div className="flex flex-col items-center">
                       <span className="overflow-hidden whitespace-nowrap text-ellipsis">{person.name}</span>
@@ -87,22 +87,22 @@ export default function About () {
                 <AudiotrackIcon/>
                 <span className="text-lg font-bold">my playlists</span>
               </div>
-              <div className="flex flex-col gap-2 pl-6 ml-3 border-l border-white">
+              <div className="flex flex-col gap-2 pl-6 ml-3 border-l border-black">
                 <div className="flex flex-col gap-2">
                   <a href="https://open.spotify.com/playlist/6lD7xfEIqSwcMht4VCxsMD?si=5390d4fb2af1403c" className="flex gap-2 text-lg hover:underline" target="_blank">
-                    <span className="font-bold text-green-500">Spotify</span> 
+                    <span className="font-bold text-green-700">Spotify</span> 
                     <span>Work Out Music</span>
                   </a>
                 </div>
                 <div className="flex flex-col gap-2">
                   <a href="https://open.spotify.com/playlist/3l5usPy4BnZOmKPwxvLkav?si=03dce61af85344ac" className="flex gap-2 text-lg hover:underline" target="_blank">
-                    <span className="font-bold text-green-500">Spotify</span> 
+                    <span className="font-bold text-green-700">Spotify</span> 
                     <span>Sweaty</span>
                   </a>
                 </div>
                 <div className="flex flex-col gap-2">
                   <a href="https://open.spotify.com/playlist/2lko74v3Zr9nIHiPjybgnM?si=8ad539a55e894216" className="flex gap-2 text-lg hover:underline" target="_blank">
-                    <span className="font-bold text-green-500">Spotify</span>
+                    <span className="font-bold text-green-700">Spotify</span>
                     <span>Basic</span> 
                   </a>
                 </div>
@@ -111,7 +111,7 @@ export default function About () {
             </div>
 
             <div className="flex items-center justify-center w-full">
-              <SheetClose className="p-2 mt-4 text-white border border-white cursor-pointer w-fit" asChild={true} >
+              <SheetClose className="p-2 mt-4 text-black border border-black cursor-pointer w-fit" asChild={true} >
                 <span>Close X</span>
               </SheetClose>
 

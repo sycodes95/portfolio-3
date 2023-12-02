@@ -3,7 +3,7 @@
 // export default function ProjectSection () {
 //   return (
 //     <div className='flex items-center w-full text-lg '>
-//       <div className='h-full p-4 bg-black border-2 border-black'>
+//       <div className='h-full p-4 bg-black border border-black'>
 //         <RocketIcon className="w-8 h-full text-white" />
 //       </div>
 //       <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>

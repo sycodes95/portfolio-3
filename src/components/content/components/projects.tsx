@@ -138,10 +138,10 @@ export default function Projects () {
               {
               proj.name === 'daynestmetrics' &&
               <div className='flex items-center w-full text-lg '>
-                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border-2 border-black'>
+                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
                   <RocketIcon className="w-8 h-full text-white" />
                 </div>
-                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>
+                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t border-b border-r border-black'>
                   <span className='font-semibold'>I built a big portion of this project in public on my youtube channel!</span>
                   <span className='text-sm'>
                     <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
@@ -155,10 +155,10 @@ export default function Projects () {
               {
               proj.name === 'polyglot pal' &&
               <div className='flex items-center w-full text-lg '>
-                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border-2 border-black'>
+                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
                   <RocketIcon className="w-8 h-full text-white" />
                 </div>
-                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>
+                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t border-b border-r border-black'>
                   <span className='font-semibold'>This project won the honorable mention category of an online hackathon.</span>
                   <span className='text-sm'>
                     <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
@@ -171,10 +171,10 @@ export default function Projects () {
               
               }
               <div className='flex items-center w-full text-lg '>
-                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border-2 border-black'>
+                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
                   <DescriptionIcon className="h-full text-white " fontSize='large' />
                 </div>
-                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>
+                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t border-b border-r border-black'>
                   <span className='font-semibold'>Description</span>
                   <span className='text-sm'>
                     {proj.description}
@@ -194,7 +194,7 @@ export default function Projects () {
                     {
                     data.description &&
                     <div className='absolute w-full max-h-full overflow-y-auto text-sm text-black transition-all duration-700 bg-white -bottom-full group-hover:bottom-0 bg-opacity-90'>
-                      <div className='p-4 font-bold border-2 border-black'>{data.description}</div>
+                      <div className='p-4 font-bold border border-black'>{data.description}</div>
                     </div>
                     }
                   </div>
