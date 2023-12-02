@@ -14,7 +14,7 @@ import jtDashboard from '../../../assets/projectPictures/jobtrackr/dashboard.png
 import jtTable from '../../../assets/projectPictures/jobtrackr/table.png'
 import jtLogin from '../../../assets/projectPictures/jobtrackr/login.png'
 import jtEntry from '../../../assets/projectPictures/jobtrackr/application-entry.png'
-
+import DescriptionIcon from '@mui/icons-material/Description';
 
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
@@ -105,6 +105,7 @@ export default function Projects () {
       youtubeUrl: ''
     },
   ]
+  
   return (
     <div className="relative flex ">
 
@@ -127,7 +128,7 @@ export default function Projects () {
                 
               </SheetTitle>
               
-              <div className='flex flex-wrap items-center justify-center pl-2 pr-2 text-lg text-white bg-black border border-black gap-x-2' >
+              <div className='flex flex-wrap items-center justify-center pl-2 pr-2 text-sm font-semibold border-black md:text-lg text-stone-700 gap-x-2' >
                 {
                 proj.stack.map((tech) => (
                   <span key={tech}>{tech}</span>
@@ -136,34 +137,50 @@ export default function Projects () {
               </div>
               {
               proj.name === 'daynestmetrics' &&
-              <Alert className='text-lg border-t-0 border-b-0 border-l-4 border-r-0'>
-                <RocketIcon className="w-4 h-4" />
-                <AlertTitle className='mb-2'>I built a big portion of this project in public on my youtube channel!</AlertTitle>
-                <AlertDescription className=''>
-                   <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
-                    <YouTubeIcon />
-                    <span className='flex flex-wrap whitespace-prewrap'>My Youtube Channel</span>
-                  </a>
-                </AlertDescription>
-              </Alert>
+              <div className='flex items-center w-full text-lg '>
+                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border-2 border-black'>
+                  <RocketIcon className="w-8 h-full text-white" />
+                </div>
+                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>
+                  <span className='font-semibold'>I built a big portion of this project in public on my youtube channel!</span>
+                  <span className='text-sm'>
+                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
+                      <YouTubeIcon />
+                      <span className='flex flex-wrap whitespace-prewrap'>My Youtube Channel</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
               }
               {
               proj.name === 'polyglot pal' &&
-              <Alert className='text-lg border-t-0 border-b-0 border-l-4 border-r-0'>
-                <RocketIcon className="w-4 h-4" />
-                <AlertTitle className='mb-2'>This project won the honorable mention category of an online hackathon.</AlertTitle>
-                <AlertDescription className=''>
-                   <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
-                    <YouTubeIcon />
-                    <span className='flex flex-wrap whitespace-prewrap'>Here are the winners of the Hackathon</span>
-                  </a>
-                </AlertDescription>
-              </Alert>
+              <div className='flex items-center w-full text-lg '>
+                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border-2 border-black'>
+                  <RocketIcon className="w-8 h-full text-white" />
+                </div>
+                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>
+                  <span className='font-semibold'>This project won the honorable mention category of an online hackathon.</span>
+                  <span className='text-sm'>
+                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
+                      <YouTubeIcon />
+                      <span className='flex flex-wrap whitespace-prewrap'>Here are the winners of the Hackathon</span>
+                    </a>
+                  </span>
+                </div>
+              </div>
+              
               }
-              <SheetDescription className='flex flex-col p-4 font-semibold text-white border-t-0 border-b-0 border-l-4 border-r-0 border-white opacity-75 '>
-                <span className='text-lg font-bold'>Description</span>
-                <span className='text-sm'>{proj.description}</span>
-              </SheetDescription>
+              <div className='flex items-center w-full text-lg '>
+                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border-2 border-black'>
+                  <DescriptionIcon className="h-full text-white " fontSize='large' />
+                </div>
+                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t-2 border-b-2 border-r-2 border-black'>
+                  <span className='font-semibold'>Description</span>
+                  <span className='text-sm'>
+                    {proj.description}
+                  </span>
+                </div>
+              </div>
 
               
               {/* <div className='w-full h-full'>
@@ -176,8 +193,8 @@ export default function Projects () {
                     <img className='transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70' key={data.src} src={data.src} />
                     {
                     data.description &&
-                    <div className='absolute w-full max-h-full p-4 overflow-y-auto text-sm transition-all duration-700 bg-black -bottom-full group-hover:bottom-0 bg-opacity-90'>
-                      <div className='p-4 font-bold border-l border-r'>{data.description}</div>
+                    <div className='absolute w-full max-h-full overflow-y-auto text-sm text-black transition-all duration-700 bg-white -bottom-full group-hover:bottom-0 bg-opacity-90'>
+                      <div className='p-4 font-bold border-2 border-black'>{data.description}</div>
                     </div>
                     }
                   </div>
