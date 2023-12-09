@@ -19,16 +19,19 @@ import frankYang from '../../../assets/people/frankYang.webp'
 
 
 export default function About () {
+
   const peopleWhoInspireMe = [
     { name : 'Tony Ferguson', src: tonyFerg, occupation: 'El Cucuy'},
     { name : 'Son Heung Min', src: sonHeungMin, occupation: 'Soccer Player'},
     { name : 'David Goggins', src: davidGoggins, occupation: 'Full-time savage'},
     { name : 'Frank Yang', src: frankYang, occupation: 'Infinite Brah'        }
   ]
+
+  
   return (
     <Sheet>
       <SheetTrigger className="group">
-        <div className="flex items-center justify-center text-white transition-all duration-700 bg-white rounded-full cursor-pointer w-36 h-36 hover:bg-black hover:bg-opacity-0 group box-glow-dna">
+        <div className="flex items-center justify-center text-white transition-all duration-700 bg-white rounded-full cursor-pointer w-36 h-36 hover:bg-black hover:bg-opacity-0 group box-glow-dna hover-box-glitch">
           <Icon className="text-black transition-all duration-700 text-opacity-80 group-hover:text-white " path={mdiDna} size={1.5} />
         </div>
       </SheetTrigger>

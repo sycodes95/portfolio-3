@@ -108,7 +108,7 @@ export default function Projects () {
     <div className="relative flex ">
 
       <div className="absolute top-0 w-12 border-t border-white left-8"></div>
-      <div className="pt-2 pb-2 text-lg font-bold text-black bg-white h-fit w-fit vertical-text-lr">
+      <div className="pt-2 pb-2 text-lg font-bold text-black bg-white h-fit w-fit vertical-text-lr text-glitch">
         FEATURED WORK
       </div>
 
@@ -116,8 +116,8 @@ export default function Projects () {
         {
         projects.map((proj, index) => (
           <Sheet key={proj.name}>
-            <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-stone-500">
-              <span className="pl-2 mb-1 text-2xl md:text-4xl">{index + 1}. {proj.name}</span>
+            <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-pink-400">
+              <span className="pl-2 mb-1 text-2xl md:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
             <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-8 pt-16 pb-12 overflow-y-auto text-black bg-white bg-opacity-70 lg:w-1/2 border-t-black font-main' side={'bottom'}>
@@ -208,14 +208,14 @@ export default function Projects () {
                 <span className='text-xl font-bold '>Visit Site</span>
               </a>
 
-              <SheetClose className='fixed top-0 right-0 hidden w-1/2 h-full cursor-default lg:contents'>
+              {/* <SheetClose className='fixed top-0 right-0 hidden w-1/2 h-full cursor-default lg:contents'>
               
                 <SheetContent className='hidden lg:flex fixed top-0 z-50 items-center text-black text-opacity-60 justify-center w-1/2 min-h-screen p-4   border-none cursor-default font-display text-[20vh] right-0 vertical-text-rl shadow-none bg-white bg-opacity-5 ' side={'right'}>
                   
                   <span className=''>{proj.name}</span>
 
                 </SheetContent>
-              </SheetClose>
+              </SheetClose> */}
               
               
             </SheetContent>

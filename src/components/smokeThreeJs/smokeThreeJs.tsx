@@ -67,7 +67,7 @@ const Smoke: React.FC = () => {
       particle.position.set(
         Math.random() * 500 - 250,
         Math.random() * 500 - 200,
-        Math.random() * 1000 - 250
+        Math.random() * 1000 - 100
       );
       particle.rotation.z = Math.random() * 360;
       scene.add(particle);

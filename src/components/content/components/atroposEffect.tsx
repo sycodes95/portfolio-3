@@ -9,7 +9,7 @@ export default function AtroposEffect ({children} : AtroposEffectProps) {
   useEffect(() => {
     const myAtropos = Atropos({
       el: '.my-atropos',
-      activeOffset: 80,
+      activeOffset: 10,
       shadow: false,
       highlight: false,
     });

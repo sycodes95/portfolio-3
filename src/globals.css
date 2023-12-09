@@ -14,7 +14,68 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+} 
+.text-glitch {
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
 }
+
+.hover-text-glitch:hover {
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+.box-glitch {
+  animation-duration: 0.01s;
+  animation-name: boxflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+.hover-box-glitch:hover {
+  animation-duration: 0.01s;
+  animation-name: boxflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ff90da, -2px 0 0 #75fa69;
+  }
+
+  to {
+    text-shadow: 2px 0.5px 2px  #ffa1e0, -1px -0.5px 2px #75fa69;
+  }
+}
+
+@keyframes boxflicker {
+  from {
+    box-shadow: 4px 0 0 #ff90da, -2px 0 0 #75fa69;
+  }
+
+  to {
+    box-shadow: 2px 0.5px 2px #ffa1e0, -1px -0.5px 2px #75fa69;
+  }
+}
+
+
+/* @keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea36af, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+} */
 /* @layer base {
   :root {
     --background: 0 0% 100%;

@@ -15,7 +15,7 @@ export default function Stack () {
     <div className="relative flex">
       <div className="absolute top-0 w-12 border-t border-white left-8"></div>
       
-      <div className="pt-2 pb-2 text-lg font-bold text-black bg-white h-fit w-fit vertical-text-lr">
+      <div className="pt-2 pb-2 text-lg font-bold text-black bg-white h-fit w-fit vertical-text-lr text-glitch">
         THE STACK
       </div>
 
@@ -23,7 +23,7 @@ export default function Stack () {
         {
         skills.map((skill) => (
           <div className="flex items-end justify-between gap-2" key={skill.name}>
-            <span className={` mb-1 text-lg md:text-xl ${skill.padding}`}>{skill.name}</span>
+            <span className={` mb-1 text-lg md:text-xl ${skill.padding} text-glitch`}>{skill.name}</span>
             {skill.icon}
           </div>
         ))
