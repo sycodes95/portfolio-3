@@ -54,7 +54,7 @@ function App() {
     };
   },[])
   return (
-    <div className='relative flex flex-col items-center w-full h-full min-h-screen border-8 border-white font-main box-glitch'>
+    <div className='flex flex-col items-center w-full h-full min-h-screen border-8 border-white  font-main box-glitch'>
       {/* <Borders /> */}
       {/* <img className='absolute top-0 left-0 object-cover -z-10' src={background} alt="" /> */}
       <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
