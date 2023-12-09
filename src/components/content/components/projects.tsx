@@ -120,9 +120,9 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-2xl md:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-8 pt-16 pb-12 overflow-y-auto text-black bg-white bg-opacity-70 lg:w-1/2 border-t-black font-main' side={'bottom'}>
-              <SheetTitle className='flex items-center justify-between '>
-                <span className='text-4xl text-black transition-all duration-500 md:text-6xl lg:text-7xl font-outline-black'>{proj.name}</span>
+            <SheetContent className='left-0 flex flex-col items-center w-3/4 h-full max-w-full max-h-screen gap-8 overflow-y-auto text-black bg-black bg-opacity-100 border-none font-main ' side={'bottom'}>
+              <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b border-green-400 box-glitch hover:bg-black group '>
+                <span className='text-4xl transition-all duration-500 group-hover:text-white font-display md:text-7xl lg:text-9xl font-outline-black'>{proj.name}</span>
                 
               </SheetTitle>
               
@@ -186,9 +186,9 @@ export default function Projects () {
               </div> */}
               <div className='grid grid-cols-1 gap-4 grow'>
                 {
-                proj.images.map((data) => (
+                proj.images.map((data, index) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group' key={data.src}>
-                    <img className='transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70' key={data.src} src={data.src} />
+                    <img className={`${index % 2 !== 0 ? 'invert hover:invert-0' : 'invert-0 hover:invert' } transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70`} key={data.src} src={data.src} />
                     {
                     data.description &&
                     <div className='absolute w-full max-h-full overflow-y-auto text-sm text-black transition-all duration-700 bg-white -bottom-full group-hover:bottom-0 bg-opacity-90'>
