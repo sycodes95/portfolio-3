@@ -65,6 +65,12 @@
   -4px -6px 0.05px rgba(223, 65, 65, 0.1);
 }
 
+.main-background{
+  background-image: url('/src/assets/background/just-waves.png');
+  background-repeat: repeat;
+  
+}
+
 /* .font-glow-red {
   color: transparent;
   text-shadow:
