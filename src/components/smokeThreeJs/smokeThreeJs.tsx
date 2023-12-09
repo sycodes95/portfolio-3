@@ -8,10 +8,10 @@ const Smoke: React.FC = () => {
   useEffect(() => {
     // Setup
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xF8C8DC);
+    scene.background = new THREE.Color(0xbde5ac);
 
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
-    camera.position.z = 400;
+    camera.position.z = 600;
 
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(window.innerWidth, window.innerHeight);

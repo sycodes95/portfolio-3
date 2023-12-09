@@ -120,9 +120,9 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-2xl md:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col items-center w-3/4 h-full max-w-full max-h-screen gap-8 overflow-y-auto text-black bg-black bg-opacity-100 border-none font-main ' side={'bottom'}>
+            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-8 overflow-y-auto text-black bg-black bg-opacity-100 border-none md:w-3/4 font-main ' side={'bottom'}>
               <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b border-green-400 box-glitch hover:bg-black group '>
-                <span className='text-4xl transition-all duration-500 group-hover:text-white font-display md:text-7xl lg:text-9xl font-outline-black'>{proj.name}</span>
+                <span className='text-4xl transition-all duration-500 group-hover:text-white font-display md:text-5xl lg:text-7xl font-outline-white'>{proj.name}</span>
                 
               </SheetTitle>
               

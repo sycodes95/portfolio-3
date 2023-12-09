@@ -8,7 +8,7 @@ export default function Title() {
         <span className='text-glitch'>Kim</span>
       </div>
       
-      <div className={` duration-1000 flex flex-col items-center w-full text-4xl font-outline-white text-white transition-all font-display md:text-5xl`}>
+      <div className={` duration-1000 flex flex-col items-center w-full text-3xl font-outline-white text-white transition-all font-display md:text-5xl`}>
         <span className='whitespace-nowrap text-glitch font-outline-black'>Front-end Developer</span>
         <span></span>
 
