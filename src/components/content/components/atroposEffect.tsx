@@ -19,7 +19,7 @@ export default function AtroposEffect ({children} : AtroposEffectProps) {
   }, []); 
   return (
     <div className="flex items-center w-full h-full atropos my-atropos grow">
-       <div className="atropos-scale">
+       <div className="w-full h-full atropos-scale">
         <div className="atropos-rotate">
           <div className="atropos-inner" >
             {children}

@@ -116,34 +116,34 @@ export default function Projects () {
         {
         projects.map((proj, index) => (
           <Sheet key={proj.name}>
-            <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-pink-400">
+            <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-pink-400 ">
               <span className="pl-2 mb-1 text-2xl md:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-8 overflow-y-auto text-black bg-black bg-opacity-100 border-none md:w-3/4 font-main ' side={'bottom'}>
-              <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b border-green-400 box-glitch hover:bg-black group '>
-                <span className='text-4xl transition-all duration-500 group-hover:text-white font-display md:text-5xl lg:text-7xl font-outline-white'>{proj.name}</span>
+            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-100 border-none md:w-1/2 font-main bg-pattern-white' side={'bottom'}>
+              <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b border-white hover:bg-black group box-glitch'>
+                <span className='mt-3 text-4xl text-white text-opacity-0 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display md:text-5xl lg:text-7xl '>{proj.name}</span>
                 
               </SheetTitle>
               
-              <div className='flex flex-wrap items-center justify-center pl-2 pr-2 text-sm font-semibold border-black md:text-lg text-stone-700 gap-x-2' >
+              {/* <div className='flex flex-wrap items-center justify-center pl-2 pr-2 text-sm font-semibold border-black md:text-lg text-stone-700 gap-x-2' >
                 {
                 proj.stack.map((tech) => (
                   <span key={tech}>{tech}</span>
                 ))
                 }
-              </div>
+              </div> */}
               {
               proj.name === 'daynestmetrics' &&
-              <div className='flex items-center w-full text-lg '>
-                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
-                  <RocketIcon className="w-8 h-full text-white" />
-                </div>
-                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t border-b border-r border-black'>
-                  <span className='font-semibold'>I built a big portion of this project in public on my youtube channel!</span>
+              <div className='flex items-center w-full text-lg text-black border-b border-white box-glitch'>
+                
+                <div className='flex flex-col w-full gap-2 p-4 bg-opacity-75 border-t border-b border-r border-black'>
+                  {/* <span className='font-semibold'>I built a big portion of this project in public on my youtube channel!</span> */}
                   <span className='text-sm'>
-                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
-                      <YouTubeIcon />
+                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit text-glitch' href={proj.youtubeUrl} target='_blank'>
+                      <div className='text-4xl'>
+                        <YouTubeIcon fontSize='inherit' />
+                      </div>
                       <span className='flex flex-wrap whitespace-prewrap'>My Youtube Channel</span>
                     </a>
                   </span>
@@ -184,7 +184,7 @@ export default function Projects () {
               {/* <div className='w-full h-full'>
                 {proj.youtubeDemo}
               </div> */}
-              <div className='grid grid-cols-1 gap-4 grow'>
+              <div className='flex flex-col grow'>
                 {
                 proj.images.map((data, index) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group' key={data.src}>

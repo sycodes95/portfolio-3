@@ -55,14 +55,16 @@ function App() {
     };
   },[])
   return (
-    <div className='flex flex-col items-center w-full h-full min-h-screen border-8 border-white font-main box-glitch'>
+    <div className='flex flex-col items-center w-full h-full min-h-screen border-8 border-white font-main box-glitch bg-pattern'>
       {/* <Borders /> */}
       {/* <img className='absolute top-0 left-0 object-cover -z-10' src={background} alt="" /> */}
-      <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000   bg-none grow `}>
+      <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000 bg-none grow `}>
+
         {
         atroposEnabled ? 
         <AtroposEffect>
           <Content />
+
         </AtroposEffect>
         :
         <Content/>
@@ -71,10 +73,15 @@ function App() {
         {/* <Content /> */}
         <SocialMedia />
       </div>
+      <div className='absolute top-0 w-full h-full'>
+        {/* <Smoke inverted={false} side='left'/> */}
+        {/* <Smoke inverted={true} side='right'/> */}
+
+      </div>
+
       {/* <div className='absolute top-0 left-0 w-full h-full '>
         <TVStatic />
       </div> */}
-      <Smoke/>
       <div className={`fixed flex items-center justify-center top-0 right-0 w-screen h-[100dvh] ${loading ? 'left-0' : '-left-full'} z-[60] bg-white transition-all duration-1000 `} ref={loadingScreen}>
         {
         spinning &&
