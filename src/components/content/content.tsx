@@ -38,7 +38,7 @@ export default function Content () {
         <Title />
       </div>
 
-      <div className="flex flex-col gap-4 md:flex-row " data-atropos-offset="5" data-atropos-opacity="1;0.6">
+      <div className="flex flex-col gap-4 lg:flex-row " data-atropos-offset="5" data-atropos-opacity="1;0.6">
         <Stack />
         <Projects />
       </div>

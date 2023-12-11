@@ -117,39 +117,28 @@ export default function Projects () {
         projects.map((proj, index) => (
           <Sheet key={proj.name}>
             <SheetTrigger className="flex items-end justify-between gap-2 transition-colors hover:text-pink-400 ">
-              <span className="pl-2 mb-1 text-2xl md:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
+              <span className="pl-2 mb-1 text-2xl lg:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-100 border-none md:w-1/2 font-main bg-pattern-white' side={'bottom'}>
-              <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b border-white hover:bg-black group box-glitch'>
-                <span className='mt-3 text-4xl text-white text-opacity-0 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display md:text-5xl lg:text-7xl '>{proj.name}</span>
+            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-100 border-none lg:w-1/2 font-main bg-pattern-white' side={'bottom'}>
+              <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b-0 border-black hover:bg-black group box-glitch'>
+                <span className='mt-3 text-4xl text-black text-opacity-100 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display lg:text-5xl lg:text-7xl '>{proj.name}</span>
                 
               </SheetTitle>
               
-              {/* <div className='flex flex-wrap items-center justify-center pl-2 pr-2 text-sm font-semibold border-black md:text-lg text-stone-700 gap-x-2' >
+              <div className='flex flex-col items-center w-full gap-2 p-4 font-semibold bg-pink-400 border-t border-t-pink-400 bg-opacity-60' >
+                <span className='pl-2 text-2xl font-bold border-white'>Stack_</span>
+
+                <div className='flex items-center'>
+                
                 {
-                proj.stack.map((tech) => (
-                  <span key={tech}>{tech}</span>
+                proj.stack.map((tech, index) => (
+                  <span className={`${index !== (proj.stack.length - 1) && 'border-r border-black'} pl-2 pr-2`} key={tech}>{tech}</span>
                 ))
                 }
-              </div> */}
-              {
-              proj.name === 'daynestmetrics' &&
-              <div className='flex items-center w-full text-lg text-black border-b border-white box-glitch'>
-                
-                <div className='flex flex-col w-full gap-2 p-4 bg-opacity-75 border-t border-b border-r border-black'>
-                  {/* <span className='font-semibold'>I built a big portion of this project in public on my youtube channel!</span> */}
-                  <span className='text-sm'>
-                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit text-glitch' href={proj.youtubeUrl} target='_blank'>
-                      <div className='text-4xl'>
-                        <YouTubeIcon fontSize='inherit' />
-                      </div>
-                      <span className='flex flex-wrap whitespace-prewrap'>My Youtube Channel</span>
-                    </a>
-                  </span>
                 </div>
               </div>
-              }
+              
               {
               proj.name === 'polyglot pal' &&
               <div className='flex items-center w-full text-lg '>
@@ -168,16 +157,16 @@ export default function Projects () {
               </div>
               
               }
-              <div className='flex items-center w-full text-lg '>
-                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
+              <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-white bg-black border-black bg-opacity-90'>
+                {/* <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
                   <DescriptionIcon className="h-full text-white " fontSize='large' />
-                </div>
-                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t border-b border-r border-black'>
-                  <span className='font-semibold'>Description</span>
-                  <span className='text-sm'>
-                    {proj.description}
-                  </span>
-                </div>
+                </div> */}
+                  {/* <span className='font-semibold'>Description</span> */}
+                  
+                <span className='pl-2 text-2xl font-semibold border-white'>About_</span>
+                <span className='pl-2 text-sm'>
+                  {proj.description}
+                </span>
               </div>
 
               
@@ -201,8 +190,8 @@ export default function Projects () {
 
               </div>
 
-              <div className='flex items-center justify-center w-full mt-4'>
-                <SheetClose className='p-2 border border-white '>Close X</SheetClose>
+              <div className='flex items-center justify-center w-full border-8 border-t-0 border-black'>
+                <SheetClose className='w-full h-full p-2 text-white duration-300 bg-black hover:bg-white hover:text-black transition-color'>Close X</SheetClose>
               </div>
               <a className='fixed left-0 z-50 flex items-center justify-center w-8 h-32 text-black transition-all duration-500 bg-white shadow-sm hover:bg-black hover:text-white whitespace-nowrap top-1/2 rounded-r-2xl shadow-zinc-600 vertical-text-rl' href={proj.websiteUrl} target='_blank'>
                 <span className='text-xl font-bold '>Visit Site</span>

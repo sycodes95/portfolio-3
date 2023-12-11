@@ -48,7 +48,7 @@ function App() {
 
   useEffect(()=> {
     const handleResize = () => {
-      window.innerWidth > 768 ? setAtroposEnabled(true) : setAtroposEnabled(false);
+      window.innerWidth > 1024 ? setAtroposEnabled(true) : setAtroposEnabled(false);
     };
     window.addEventListener('resize', handleResize);
 
@@ -77,11 +77,11 @@ function App() {
       </div>
       
       <div className='absolute top-0 w-full h-full'>
-        {/* <Smoke inverted={false} side='left'/> */}
+        <Smoke inverted={false} side='left'/>
         {/* <Smoke inverted={true} side='right'/> */}
 
       </div>
-      <SmokeBackground />
+      {/* <SmokeBackground /> */}
       {/* <div className='absolute top-0 left-0 w-full h-full '>
         <TVStatic />
       </div> */}
