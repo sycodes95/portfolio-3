@@ -13,11 +13,13 @@ import { InfinitySpin } from 'react-loader-spinner'
 import AudioVisualizer from './components/audioVisualizer/audioVisualizer'
 import background from './assets/background/trippybackground.webp'
 import TVStatic from './components/tvStaticThree/tvStaticThree'
+import SmokeBackground from './components/smoke/smoke.tsx'
 function App() {
   const [loading, setLoading] = useState(true)
   const [spinning, setSpinning] = useState(true)
   const [atroposEnabled, setAtroposEnabled] = useState(true)
   const loadingScreen = useRef<HTMLDivElement | null>(null)
+  
   
   useEffect(()=>{
     if(spinning) {
@@ -55,7 +57,7 @@ function App() {
     };
   },[])
   return (
-    <div className='flex flex-col items-center w-full h-full min-h-screen border-8 border-white font-main box-glitch bg-pattern'>
+    <div className='flex flex-col items-center w-full h-full min-h-screen border-8 border-white font-main box-glitch'>
       {/* <Borders /> */}
       {/* <img className='absolute top-0 left-0 object-cover -z-10' src={background} alt="" /> */}
       <div className={` z-10 flex flex-col items-center justify-center w-full h-full gap-12 overflow-hidden transition-all duration-1000 bg-none grow `}>
@@ -73,12 +75,13 @@ function App() {
         {/* <Content /> */}
         <SocialMedia />
       </div>
+      
       <div className='absolute top-0 w-full h-full'>
         {/* <Smoke inverted={false} side='left'/> */}
         {/* <Smoke inverted={true} side='right'/> */}
 
       </div>
-
+      <SmokeBackground />
       {/* <div className='absolute top-0 left-0 w-full h-full '>
         <TVStatic />
       </div> */}
