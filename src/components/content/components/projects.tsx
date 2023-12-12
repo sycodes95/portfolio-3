@@ -178,8 +178,8 @@ export default function Projects () {
 
               </div>
 
-              <div className='flex items-center justify-center w-full border-8 border-t-0 border-black'>
-                <SheetClose className='w-full h-full p-2 text-white duration-300 bg-black hover:bg-white hover:text-black transition-color'>Close X</SheetClose>
+              <div className='flex items-center justify-center w-full'>
+                <SheetClose className='w-full h-full p-2 text-white duration-300 bg-black bg-opacity-90 hover:bg-white hover:text-black transition-color'>Close X</SheetClose>
               </div>
               <a className='fixed left-0 z-50 flex items-center justify-center w-8 h-32 text-black transition-all duration-500 bg-white shadow-sm hover:bg-black hover:text-white whitespace-nowrap top-1/2 rounded-r-2xl shadow-zinc-600 vertical-text-rl' href={proj.websiteUrl} target='_blank'>
                 <span className='text-xl font-bold '>Visit Site</span>
