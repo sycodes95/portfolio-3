@@ -76,7 +76,18 @@ export default function Projects () {
       stack: ['react.js', 'next.js', 'typescript', 'tailwindcss', 'postgresql'],
       websiteUrl: 'https://daynestmetrics.up.railway.app/',
       youtubeUrl: 'https://www.youtube.com/@untalentedwebdev',
-      // youtubeDemo: <iframe className='w-full' width="" height="500" src="https://www.youtube.com/embed/KnOYuX3RQzY?si=-fx7s8GUscBLm87T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      misc: (
+        <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-black border-b bg-emerald-400 bg-opacity-90 border-b-emerald-500'>
+          <span className='pl-2 text-2xl font-semibold border-white'>Misc_</span>
+          <div className='w-full pl-2 text-sm'>
+            <a className='flex items-center justify-center w-full gap-2 p-2 transition-all duration-300 bg-white bg-opacity-50 border border-white hover:underline hover:bg-opacity-100 ' href='https://www.youtube.com/watch?v=zO7EnZkR55k&t=0' target='_blank'>
+              <YouTubeIcon />
+              <span>Watch me code up the scatter plot for this app!</span>
+            </a>
+          </div>
+        </div>
+      )
+      
     },
     { 
       name: 'polyglot pal', 
@@ -100,7 +111,7 @@ export default function Projects () {
       ], 
       websiteUrl: 'https://jobtrackr.pro',
       stack: ['react.js', 'tailwindcss', 'node.js', 'express.js', 'postgresql'],
-      youtubeUrl: ''
+      youtubeUrl: '',
     },
   ]
   
@@ -120,17 +131,15 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-2xl lg:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-100 border-none lg:w-1/2 font-main bg-pattern-white' side={'bottom'}>
+            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-50 border-none lg:w-1/2 font-main bg-pattern-white' side={'bottom'}>
               <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b-0 border-black hover:bg-black group box-glitch'>
-                <span className='mt-3 text-4xl text-black text-opacity-100 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display lg:text-5xl lg:text-7xl '>{proj.name}</span>
+                <span className='mt-3 text-4xl text-black text-opacity-100 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display lg:text-5xl lg:text-7xl '>{proj.name}_</span>
                 
               </SheetTitle>
               
               <div className='flex flex-col items-center w-full gap-2 p-4 font-semibold bg-pink-400 border-t border-t-pink-400 bg-opacity-60' >
                 <span className='pl-2 text-2xl font-bold border-white'>Stack_</span>
-
                 <div className='flex items-center'>
-                
                 {
                 proj.stack.map((tech, index) => (
                   <span className={`${index !== (proj.stack.length - 1) && 'border-r border-black'} pl-2 pr-2`} key={tech}>{tech}</span>
@@ -139,37 +148,16 @@ export default function Projects () {
                 </div>
               </div>
               
-              {
-              proj.name === 'polyglot pal' &&
-              <div className='flex items-center w-full text-lg '>
-                <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
-                  <RocketIcon className="w-8 h-full text-white" />
-                </div>
-                <div className='flex flex-col w-full gap-2 p-4 text-black bg-opacity-75 border-t border-b border-r border-black'>
-                  <span className='font-semibold'>This project won the honorable mention category of an online hackathon.</span>
-                  <span className='text-sm'>
-                    <a className='flex items-center gap-2 text-red-500 rounded-lg hover:underline w-fit' href={proj.youtubeUrl} target='_blank'>
-                      <YouTubeIcon />
-                      <span className='flex flex-wrap whitespace-prewrap'>Here are the winners of the Hackathon</span>
-                    </a>
-                  </span>
-                </div>
-              </div>
-              
-              }
-              <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-white bg-black border-black bg-opacity-90'>
-                {/* <div className='flex items-center justify-center w-20 h-full p-4 bg-black border border-black'>
-                  <DescriptionIcon className="h-full text-white " fontSize='large' />
-                </div> */}
-                  {/* <span className='font-semibold'>Description</span> */}
-                  
+              <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-white bg-black bg-opacity-90'>
                 <span className='pl-2 text-2xl font-semibold border-white'>About_</span>
                 <span className='pl-2 text-sm'>
                   {proj.description}
                 </span>
               </div>
 
-              
+              {
+              proj.misc && proj.misc 
+              }
               {/* <div className='w-full h-full'>
                 {proj.youtubeDemo}
               </div> */}
@@ -177,11 +165,11 @@ export default function Projects () {
                 {
                 proj.images.map((data, index) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group' key={data.src}>
-                    <img className={`${index % 2 !== 0 ? 'invert hover:invert-0' : 'invert-0 hover:invert' } transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-90 opacity-70`} key={data.src} src={data.src} />
+                    <img className={` transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-100 opacity-95`} key={data.src} src={data.src} />
                     {
                     data.description &&
-                    <div className='absolute w-full max-h-full overflow-y-auto text-sm text-black transition-all duration-700 bg-white -bottom-full group-hover:bottom-0 bg-opacity-90'>
-                      <div className='p-4 font-bold border border-black'>{data.description}</div>
+                    <div className='absolute w-full max-h-full overflow-y-auto text-sm text-black transition-all duration-700 bg-black bg-opacity-80 -bottom-full group-hover:bottom-0 bg-pattern-white'>
+                      <div className='p-4 text-black '>{data.description}</div>
                     </div>
                     }
                   </div>
