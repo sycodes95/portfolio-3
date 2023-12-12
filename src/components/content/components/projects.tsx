@@ -98,7 +98,18 @@ export default function Projects () {
       ], 
       websiteUrl: 'https://polyglotpal.up.railway.app/',
       stack: ['react.js', 'typescript', 'tailwindcss', 'convex'],
-      youtubeUrl: 'https://youtu.be/PJjk4Qg_GiU?si=eZEPVYk85dUh1vJh&t=574'
+      youtubeUrl: 'https://youtu.be/PJjk4Qg_GiU?si=eZEPVYk85dUh1vJh&t=574',
+      misc: (
+        <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-black border-b bg-emerald-400 bg-opacity-90 border-b-emerald-500'>
+          <span className='pl-2 text-2xl font-semibold border-white'>Misc_</span>
+          <div className='w-full pl-2 text-sm'>
+            <a className='flex items-center justify-center w-full gap-2 p-2 transition-all duration-300 bg-white bg-opacity-50 border border-white hover:underline hover:bg-opacity-100 ' href='https://www.youtube.com/watch?v=PJjk4Qg_GiU&t=577s' target='_blank'>
+              <YouTubeIcon />
+              <span>I was featured as one of the winners of a hackathon with this app!</span>
+            </a>
+          </div>
+        </div>
+      )
     },
     { 
       name: 'jobtrackr', 
@@ -112,6 +123,7 @@ export default function Projects () {
       websiteUrl: 'https://jobtrackr.pro',
       stack: ['react.js', 'tailwindcss', 'node.js', 'express.js', 'postgresql'],
       youtubeUrl: '',
+      
     },
   ]
   
@@ -150,7 +162,7 @@ export default function Projects () {
               
               <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-white bg-black bg-opacity-90'>
                 <span className='pl-2 text-2xl font-semibold border-white'>About_</span>
-                <span className='pl-2 text-sm'>
+                <span className='pl-2 text-sm text-center'>
                   {proj.description}
                 </span>
               </div>
@@ -165,7 +177,7 @@ export default function Projects () {
                 {
                 proj.images.map((data, index) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group' key={data.src}>
-                    <img className={` transition-all duration-500 bg-cover rounded-lg grayscale hover:grayscale-0 hover:opacity-100 opacity-95`} key={data.src} src={data.src} />
+                    <img className={` transition-all duration-500 bg-cover grayscale hover:grayscale-0 hover:opacity-100 opacity-95`} key={data.src} src={data.src} />
                     {
                     data.description &&
                     <div className='absolute w-full max-h-full overflow-y-auto text-sm text-black transition-all duration-700 bg-black bg-opacity-80 -bottom-full group-hover:bottom-0 bg-pattern-white'>
