@@ -80,7 +80,7 @@ export default function Projects () {
         <div className='flex flex-col items-center w-full gap-2 p-4 text-lg text-black border-b bg-emerald-400 bg-opacity-90 border-b-emerald-500'>
           <span className='pl-2 text-2xl font-semibold border-white'>Misc_</span>
           <div className='w-full pl-2 text-sm'>
-            <a className='flex items-center justify-center w-full gap-2 p-2 transition-all duration-300 bg-white bg-opacity-50 border border-white hover:underline hover:bg-opacity-100 ' href='https://www.youtube.com/watch?v=zO7EnZkR55k&t=0' target='_blank'>
+            <a className='flex items-center justify-center w-full gap-2 p-2 transition-all duration-300 bg-white bg-opacity-50 border border-white hover:underline hover:bg-opacity-100' href='https://www.youtube.com/watch?v=zO7EnZkR55k&t=0' target='_blank'>
               <YouTubeIcon />
               <span>Watch me code up the scatter plot for this app!</span>
             </a>
@@ -128,7 +128,7 @@ export default function Projects () {
   ]
   
   return (
-    <div className="relative flex ">
+    <div className="relative flex grow">
 
       <div className="absolute top-0 w-12 border-t border-white left-8"></div>
       <div className="pt-2 pb-2 text-lg font-bold text-black bg-white h-fit w-fit vertical-text-lr text-glitch">
@@ -143,7 +143,7 @@ export default function Projects () {
               <span className="pl-2 mb-1 text-2xl lg:text-4xl text-glitch hover-text-glitch">{index + 1}. {proj.name}</span>
             </SheetTrigger>
 
-            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-50 border-none lg:w-1/2 font-main bg-pattern-white' side={'bottom'}>
+            <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-50 border-none lg:w-1/2 font-main bg-pattern-white grow' side={'bottom'}>
               <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b-0 border-black hover:bg-black group box-glitch'>
                 <span className='mt-3 text-4xl text-black text-opacity-100 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display lg:text-5xl lg:text-7xl '>{proj.name}_</span>
                 
@@ -190,21 +190,12 @@ export default function Projects () {
 
               </div>
 
-              <div className='flex items-center justify-center w-full'>
+              <div className='flex items-center justify-center w-full h-full grow'>
                 <SheetClose className='w-full h-full p-2 text-white duration-300 bg-black bg-opacity-90 hover:bg-white hover:text-black transition-color'>Close X</SheetClose>
               </div>
               <a className='fixed left-0 z-50 flex items-center justify-center w-8 h-32 text-black transition-all duration-500 bg-white shadow-sm hover:bg-black hover:text-white whitespace-nowrap top-1/2 rounded-r-2xl shadow-zinc-600 vertical-text-rl' href={proj.websiteUrl} target='_blank'>
                 <span className='text-xl font-bold '>Visit Site</span>
               </a>
-
-              {/* <SheetClose className='fixed top-0 right-0 hidden w-1/2 h-full cursor-default lg:contents'>
-              
-                <SheetContent className='hidden lg:flex fixed top-0 z-50 items-center text-black text-opacity-60 justify-center w-1/2 min-h-screen p-4   border-none cursor-default font-display text-[20vh] right-0 vertical-text-rl shadow-none bg-white bg-opacity-5 ' side={'right'}>
-                  
-                  <span className=''>{proj.name}</span>
-
-                </SheetContent>
-              </SheetClose> */}
               
               
             </SheetContent>

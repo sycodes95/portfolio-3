@@ -16,6 +16,7 @@ import tonyFerg from '../../../assets/people/tonyFerg.webp'
 import davidGoggins from '../../../assets/people/davidGoggins.webp'
 import sonHeungMin from '../../../assets/people/sonHeungMin.webp'
 import frankYang from '../../../assets/people/frankYang.webp'
+import { Dna } from "react-loader-spinner";
 
 
 export default function About () {
@@ -35,31 +36,28 @@ export default function About () {
           <Icon className="text-black transition-all duration-700 text-opacity-80 group-hover:text-white " path={mdiDna} size={1.5} />
         </div>
       </SheetTrigger>
-      <SheetContent className="p-4 flex flex-col w-full h-full max-h-[100dvh] overflow-y-auto text-lg text-black bg-white border-none bg-opacity-75 md:-translate-x-1/2 min-h-fit md:w-1/2 font-main md:left-1/2" side={'bottom'}>
-        <SheetHeader className="flex flex-col gap-4">
-          <SheetTitle className="flex items-center justify-center w-full text-2xl">
-            <Icon className="text-black duration-700 text-opacity-90" path={mdiDna} size={1.5} />
+
+      <SheetContent className="flex flex-col w-full h-full max-h-full p-4 overflow-y-auto text-lg text-black bg-opacity-75 border-none bg-pattern-white md:-translate-x-full min-h-fit md:w-1/2 font-main md:left-full grow" side={'bottom'}>
+        <SheetHeader className="flex flex-col h-full gap-4">
+          <SheetTitle className="flex items-center justify-center w-full text-2xl rotate-90">
+            <Dna   />
           </SheetTitle>
-          <SheetDescription className="flex flex-col gap-2">
+          <SheetDescription className="flex flex-col h-full gap-2 grow">
             <div className="flex items-center gap-2">
               <InfoIcon/>
               <span className="text-lg font-bold">my story</span>
             </div>
             <div className="flex flex-col gap-2 pl-6 ml-3 text-left border-l border-black">
               <span className="text-lg font-main">
-                I initially got into programming due to my realization of how useful it could be to learn this skill, especially because tech is where the future is headed.
-                My journey started with telling myself that I will fully commit to learning this craft for 1 month to see if it's something I could 
-                see myself continue doing and more importantly, to see if I even enjoyed it at all.
+                I started programming because I recognized its importance in a tech-centric world. I challenged myself to learn the ropes for a month, just to see if it was something I'd enjoy or even be good at.
               </span>
 
               <span className="text-lg font-main">
-                As I kept improving and developing my skills as a web developer, programming pretty much became a video game for me which felt more fulfilling and rewarding
-                than playing actual video games and thus saw myself doing this professionally.
+                Although I wasn't particularly good at it, I did enjoy the challenge and as I improved my web development skills, programming became less of a chore and more like a game. One that was actually more fulfilling than any video game. This realization steered me towards a professional path in this field.
               </span>
 
               <span className="text-lg font-main">
-                The blend of creativity, problem solving, and challenge is what makes this all so worth it and fulfilling for me. 
-                I love the fact that with programming, there's never a finish line, there's always areas I can improve and there's always new technologies to learn. 
+                The real draw for me is the mix of creativity, problem-solving, and the ongoing challenge. In programming, there's always something new to learn, no finish line. That constant evolution is what keeps it interesting. 
               </span>
             </div>
 
@@ -113,8 +111,8 @@ export default function About () {
               </div>
             </div>
 
-            <div className="flex items-center justify-center w-full">
-              <SheetClose className="p-2 mt-4 text-black border border-black cursor-pointer w-fit" asChild={true} >
+            <div className="flex items-end justify-center w-full h-full grow">
+              <SheetClose className="p-2 text-black border border-black cursor-pointer w-fit" asChild={true} >
                 <span>Close X</span>
               </SheetClose>
 
