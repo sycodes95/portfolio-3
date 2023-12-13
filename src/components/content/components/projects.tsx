@@ -14,10 +14,8 @@ import jtDashboard from '../../../assets/projectPictures/jobtrackr/dashboard.png
 import jtTable from '../../../assets/projectPictures/jobtrackr/table.png'
 import jtLogin from '../../../assets/projectPictures/jobtrackr/login.png'
 import jtEntry from '../../../assets/projectPictures/jobtrackr/application-entry.png'
-import DescriptionIcon from '@mui/icons-material/Description';
 
 
-import { RocketIcon } from "@radix-ui/react-icons"
 import YouTubeIcon from '@mui/icons-material/YouTube';
 
 import {

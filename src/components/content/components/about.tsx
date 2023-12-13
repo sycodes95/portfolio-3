@@ -11,22 +11,21 @@ import Icon from "@mdi/react";
 import { mdiDna } from '@mdi/js';
 import InfoIcon from '@mui/icons-material/Info';
 import AudiotrackIcon from '@mui/icons-material/Audiotrack';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import tonyFerg from '../../../assets/people/tonyFerg.webp'
-import davidGoggins from '../../../assets/people/davidGoggins.webp'
-import sonHeungMin from '../../../assets/people/sonHeungMin.webp'
-import frankYang from '../../../assets/people/frankYang.webp'
+// import tonyFerg from '../../../assets/people/tonyFerg.webp'
+// import davidGoggins from '../../../assets/people/davidGoggins.webp'
+// import sonHeungMin from '../../../assets/people/sonHeungMin.webp'
+// import frankYang from '../../../assets/people/frankYang.webp'
 import { Dna } from "react-loader-spinner";
 
 
 export default function About () {
 
-  const peopleWhoInspireMe = [
-    { name : 'Tony Ferguson', src: tonyFerg, occupation: 'El Cucuy'},
-    { name : 'Son Heung Min', src: sonHeungMin, occupation: 'Soccer Player'},
-    { name : 'David Goggins', src: davidGoggins, occupation: 'Full-time savage'},
-    { name : 'Frank Yang', src: frankYang, occupation: 'Infinite Brah'        }
-  ]
+  // const peopleWhoInspireMe = [
+  //   { name : 'Tony Ferguson', src: tonyFerg, occupation: 'El Cucuy'},
+  //   { name : 'Son Heung Min', src: sonHeungMin, occupation: 'Soccer Player'},
+  //   { name : 'David Goggins', src: davidGoggins, occupation: 'Full-time savage'},
+  //   { name : 'Frank Yang', src: frankYang, occupation: 'Infinite Brah'        }
+  // ]
 
   
   return (

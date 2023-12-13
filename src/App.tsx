@@ -10,10 +10,8 @@ import { Toaster } from "@/components/ui/toaster"
 import SocialMedia from './components/content/components/socialMedia'
 import AtroposEffect from './components/content/components/atroposEffect'
 import { InfinitySpin } from 'react-loader-spinner'
-import AudioVisualizer from './components/audioVisualizer/audioVisualizer'
-import background from './assets/background/trippybackground.webp'
-import TVStatic from './components/tvStaticThree/tvStaticThree'
-import SmokeBackground from './components/smoke/smoke.tsx'
+
+
 function App() {
   const [loading, setLoading] = useState(true)
   const [spinning, setSpinning] = useState(true)

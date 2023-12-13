@@ -5,7 +5,7 @@ type SmokeProps = {
   inverted: boolean;
   side: 'left' | 'right';
 }
-const Smoke: React.FC<SmokeProps> = ({inverted, side}) => {
+const Smoke: React.FC<SmokeProps> = ({inverted}) => {
   
   const mountRef = useRef<HTMLDivElement>(null);
 

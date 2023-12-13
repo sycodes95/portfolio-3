@@ -30,7 +30,7 @@ export default function Content () {
       })
     }
   };
-
+  
   return (
     <div className={`z-50 flex flex-col items-center justify-center w-full h-full gap-10 pt-12 pb-24 overflow-hidden grow`} ref={contentContainer}>
             
