@@ -175,7 +175,7 @@ export default function Projects () {
               </div> */}
               <div className='flex flex-col grow'>
                 {
-                proj.images.map((data, index) => (
+                proj.images.map((data) => (
                   <div className='relative flex items-start justify-center w-full h-full overflow-hidden rounded-lg group' key={data.src}>
                     <img className={` transition-all duration-500 bg-cover grayscale hover:grayscale-0 hover:opacity-100 opacity-95`} key={data.src} src={data.src} />
                     {
