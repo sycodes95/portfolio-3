@@ -37,23 +37,23 @@ export default function About () {
         </div>
       </SheetTrigger>
 
-      <SheetContent className="flex flex-col w-full h-full max-h-full p-4 overflow-y-auto text-lg text-black bg-opacity-75 border-none bg-pattern-white md:-translate-x-full min-h-fit md:w-1/2 font-main md:left-full grow" side={'bottom'}>
+      <SheetContent className="flex flex-col w-full h-full max-h-full overflow-y-auto text-lg text-black bg-opacity-75 border-none 0 bg-pattern-white md:-translate-x-full min-h-fit md:w-1/2 font-main md:left-full grow" side={'bottom'}>
         <SheetHeader className="flex flex-col h-full gap-4">
-          <SheetTitle className="flex items-center justify-center w-full text-2xl rotate-90">
+          <SheetTitle className="flex items-center justify-center w-full p-4 text-2xl rotate-90">
             <Dna   />
           </SheetTitle>
-          <SheetDescription className="flex flex-col h-full gap-2 grow">
-            <div className="flex items-center gap-2">
+          <SheetDescription className="flex flex-col h-full grow">
+            <div className="flex items-center gap-2 p-2 text-black">
               <InfoIcon/>
               <span className="text-lg font-bold">my story</span>
             </div>
-            <div className="flex flex-col gap-2 pl-6 ml-3 text-left border-l border-black">
+            <div className="flex flex-col gap-2 p-4 text-left bg-pink-300 bg-opacity-80">
               <span className="text-lg font-main">
                 I started programming because I recognized its importance in a tech-centric world. I challenged myself to learn the ropes for a month, just to see if it was something I'd enjoy or even be good at.
               </span>
 
               <span className="text-lg font-main">
-                Although I wasn't particularly good at it, I did enjoy the challenge and as I improved my web development skills, programming became less of a chore and more like a game. One that was actually more fulfilling than any video game. This realization steered me towards a professional path in this field.
+                Although I wasn't particularly good, I did enjoy the challenge and as I improved my web development skills, programming became less of a chore and more like a game. One that was actually more fulfilling than any video game. This realization steered me towards a professional path in this field.
               </span>
 
               <span className="text-lg font-main">
@@ -61,7 +61,7 @@ export default function About () {
               </span>
             </div>
 
-            <div className="flex flex-col items-start gap-2">
+            {/* <div className="flex flex-col items-start gap-2">
               <div className="flex items-center gap-2">
                 <PsychologyIcon/>
                 <span className="text-lg font-bold">people i like</span>
@@ -81,14 +81,14 @@ export default function About () {
                 ))
                 }
               </div>
-            </div>
+            </div> */}
 
-            <div className="flex flex-col items-start gap-2">
-              <div className="flex items-center gap-2">
+            <div className="flex flex-col items-start">
+              <div className="flex items-center gap-2 p-2">
                 <AudiotrackIcon/>
                 <span className="text-lg font-bold">my playlists</span>
               </div>
-              <div className="flex flex-col gap-2 pl-6 ml-3 border-l border-black">
+              <div className="flex flex-col w-full h-full gap-2 p-4 bg-emerald-400 bg-opacity-80">
                 <div className="flex flex-col gap-2">
                   <a href="https://open.spotify.com/playlist/6lD7xfEIqSwcMht4VCxsMD?si=5390d4fb2af1403c" className="flex gap-2 text-lg hover:underline" target="_blank">
                     <span className="font-bold text-green-700">Spotify</span> 
@@ -111,7 +111,7 @@ export default function About () {
               </div>
             </div>
 
-            <div className="flex items-end justify-center w-full h-full grow">
+            <div className="flex items-end justify-center w-full h-full p-4 grow">
               <SheetClose className="p-2 text-black border border-black cursor-pointer w-fit" asChild={true} >
                 <span>Close X</span>
               </SheetClose>

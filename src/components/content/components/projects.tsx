@@ -145,7 +145,7 @@ export default function Projects () {
 
             <SheetContent className='left-0 flex flex-col items-center w-full h-full max-w-full max-h-screen gap-0 overflow-y-auto text-black bg-white bg-opacity-50 border-none lg:w-1/2 font-main bg-pattern-white grow' side={'bottom'}>
               <SheetTitle className='flex items-center justify-center w-full p-8 text-white transition-all duration-700 border-b-0 border-black hover:bg-black group box-glitch'>
-                <span className='mt-3 text-4xl text-black text-opacity-100 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display lg:text-5xl lg:text-7xl '>{proj.name}_</span>
+                <a className='flex items-center justify-center w-full h-full mt-3 text-4xl text-black text-opacity-100 transition-all duration-500 text-glitch-alt text-glitch font-outline-black group-hover:text-white font-display lg:text-7xl' href={proj.websiteUrl} target='_blank'>{proj.name}_</a>
                 
               </SheetTitle>
               
