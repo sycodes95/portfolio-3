@@ -107,7 +107,10 @@ export default function Projects () {
             </a>
           </div>
         </div>
-      )
+      ),
+      video: [
+        <iframe className='w-full h-full' width="" height="400" src="https://www.youtube.com/embed/eMQ--bC-aQc?si=PRv1fEmhg-tKH-TO" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>,
+      ]
     },
     { 
       name: 'jobtrackr', 
@@ -186,6 +189,19 @@ export default function Projects () {
                 ))
                 }
 
+              </div>
+
+              <div className='flex flex-col w-full h-full grow'>
+
+                {
+                proj.video &&
+                proj.video.map((jsx) => (
+                  <div className='flex w-full h-full grow min-h-[530px]'>
+                  {jsx}
+                  </div>
+                ))
+                
+                }
               </div>
 
               <div className='flex items-center justify-center w-full h-full grow'>
